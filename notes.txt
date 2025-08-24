@@ -1,0 +1,3 @@
+>description for each
+>handle potpissers site being offline + plan it being online
+>github api to set the .readme?
