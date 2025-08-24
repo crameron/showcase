@@ -60,16 +60,17 @@ export default function Home() {
                       <iframe src={"https://super-showcase.vercel.app"}/>
                   </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-9">
-                  <AccordionTrigger>leetcode</AccordionTrigger>
-                  <AccordionContent>
-                      {/*TODO -> leetcode profile?*/}
-                  </AccordionContent>
-              </AccordionItem>
+              {/*<AccordionItem value="item-9">*/}
+              {/*    <AccordionTrigger>leetcode</AccordionTrigger>*/}
+              {/*    <AccordionContent>*/}
+              {/*        /!*TODO -> leetcode profile?*!/*/}
+              {/*    </AccordionContent>*/}
+              {/*</AccordionItem>TODO remove*/}
               <AccordionItem value="item-100">
                   <AccordionTrigger>minecraft server network</AccordionTrigger>
                   <AccordionContent>
                       {/*TODO -> potpissers */}
+                      https://www.youtube.com/watch?v=XCERSWZMcac&list=PLBHQeT8CULinPAdCLE_jSEqW6i_v7ToPe
                   </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-10">
