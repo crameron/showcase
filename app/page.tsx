@@ -1,3 +1,5 @@
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
@@ -33,14 +35,50 @@ export default function Home() {
         {/*    Read our docs*/}
         {/*  </a>*/}
         {/*</div>*/}
-
-        <iframe src={"https://untitled-moviesite.vercel.app"}/>
-        <iframe src={"https://pvputils.vercel.app"} className={"w-full"}/>
-        {/*TODO -> fabric pvp utils*/}
-        {/*<iframe src={""}/> TODO -> this site*/}
-        {/*TODO -> potpissers-web*/}
-        {/*TODO -> potpissers */}
-        {/*TODO -> leetcode profile*/}
+          <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                  <AccordionTrigger>unfinished movie data aggregator site</AccordionTrigger>
+                  <AccordionContent>
+                      <iframe src={"https://untitled-moviesite.vercel.app"}/>
+                  </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                  <AccordionTrigger>minecraft resource pack updater + utility mod showcase site</AccordionTrigger>
+                  <AccordionContent>
+                      <iframe src={"https://pvputils.vercel.app/"}/>
+                  </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                  <AccordionTrigger>minecraft utility mod</AccordionTrigger>
+                  <AccordionContent>
+                      <iframe src={"https://pvputils.vercel.app/fabric-pvp-utils"}/>
+                  </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                  <AccordionTrigger>project showcase site</AccordionTrigger>
+                  <AccordionContent>
+                      <iframe src={"https://super-showcase.vercel.app"}/>
+                  </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-9">
+                  <AccordionTrigger>leetcode</AccordionTrigger>
+                  <AccordionContent>
+                      {/*TODO -> leetcode profile?*/}
+                  </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-100">
+                  <AccordionTrigger>minecraft server network</AccordionTrigger>
+                  <AccordionContent>
+                      {/*TODO -> potpissers */}
+                  </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-10">
+                  <AccordionTrigger>minecraft server network site</AccordionTrigger>
+                  <AccordionContent>
+                      {/*TODO -> potpissers-web*/}
+                  </AccordionContent>
+              </AccordionItem>
+          </Accordion>
       </main>
       {/*<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">*/}
         {/*<a*/}
