@@ -100,7 +100,12 @@ export default function Home() {
                   </AccordionTrigger>
                   <AccordionContent>
                       {/*TODO -> potpissers */}
-                      https://www.youtube.com/watch?v=XCERSWZMcac&list=PLBHQeT8CULinPAdCLE_jSEqW6i_v7ToPe
+                      <iframe width="560" height="315"
+                              src="https://www.youtube.com/embed/XCERSWZMcac?si=tLQHmbQcSohZqF7O"
+                              title="YouTube video player" frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              allowFullScreen/>
                   </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-10">
