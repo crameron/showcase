@@ -37,25 +37,49 @@ export default function Home() {
         {/*</div>*/}
           <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                  <AccordionTrigger>unfinished movie data aggregator site</AccordionTrigger>
+                  <AccordionTrigger>
+                      <p>
+                          unfinished movie data aggregator site: <br/>
+                          - wraps omdb, tmdb, and wikidata (sparql) &#39;s apis<br/>
+                          - built with postgresql, nuxt.js, tailwind, and shadcn-vue. hosted on vercel + supabase
+                      </p>
+                  </AccordionTrigger>
                   <AccordionContent>
                       <iframe src={"https://untitled-moviesite.vercel.app"}/>
                   </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                  <AccordionTrigger>minecraft resource pack updater + utility mod showcase site</AccordionTrigger>
+                  <AccordionTrigger>
+                      <p>
+                          minecraft resource pack updater + utility mod showcase site: <br/>
+                          - pack-updater: my full client-side web worker-based solution for updating resource packs from 1.7&#39;s version 1 to 1.21.4&#39;s version 46<br/>
+                          - pvp-utils: hosts information for my mod and integrates with modrinth&#39;s api to keep it&#39;s modrinth page updated<br/>
+                          - built with next.js, tailwind, and shadcn. hosted on vercel + supabase
+                      </p>
+                  </AccordionTrigger>
                   <AccordionContent>
                       <iframe src={"https://pvputils.vercel.app/"}/>
                   </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                  <AccordionTrigger>minecraft utility mod</AccordionTrigger>
+                  <AccordionTrigger>
+                      <p>
+                          minecraft utility mod: <br/>
+                          - uses fabric&#39;s modding framework to implement a variety of pvp-related features<br/>
+                          - built with java. hosted on modrinth
+                      </p>
+                  </AccordionTrigger>
                   <AccordionContent>
                       <iframe src={"https://pvputils.vercel.app/fabric-pvp-utils"}/>
                   </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                  <AccordionTrigger>project showcase site</AccordionTrigger>
+                  <AccordionTrigger>
+                      <p>
+                          project showcase site: <br/>
+                          - built with next.js, tailwind, and shadcn. hosted on vercel
+                      </p>
+                  </AccordionTrigger>
                   <AccordionContent>
                       <iframe src={"https://super-showcase.vercel.app"}/>
                   </AccordionContent>
@@ -67,14 +91,25 @@ export default function Home() {
               {/*    </AccordionContent>*/}
               {/*</AccordionItem>TODO remove*/}
               <AccordionItem value="item-100">
-                  <AccordionTrigger>minecraft server network</AccordionTrigger>
+                  <AccordionTrigger>
+                      <p>
+                          minecraft server network: <br/>
+                          - paper&#39;s plugin framework<br/>
+                          - built with java, postgresql, and sqlite. was hosted on ovh
+                      </p>
+                  </AccordionTrigger>
                   <AccordionContent>
                       {/*TODO -> potpissers */}
                       https://www.youtube.com/watch?v=XCERSWZMcac&list=PLBHQeT8CULinPAdCLE_jSEqW6i_v7ToPe
                   </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-10">
-                  <AccordionTrigger>minecraft server network site</AccordionTrigger>
+                  <AccordionTrigger>
+                      <p>
+                          minecraft server network site: <br/>
+                          - built with javascript, css, and golang. was hosted on ovh
+                      </p>
+                  </AccordionTrigger>
                   <AccordionContent>
                       {/*TODO -> potpissers-web*/}
                   </AccordionContent>
