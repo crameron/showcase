@@ -6,27 +6,28 @@ export default function Home() {
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
           <Accordion type="single" collapsible>
-              <AccordionItem value="item-1">
-                  <AccordionTrigger>
-                      <p>
-                          <Badge variant={"destructive"}>wip</Badge> <br/>
-                          <GenericBadge text={"vue"}/> <GenericBadge text={"nuxt"}/> <PostgresQLBadge/> <TailwindBadge/> <ShadcnBadge/> <GitBadge/> <br/>
-                          movie data aggregator site <br/>
-                          - wraps omdb, tmdb, and wikidata&#39;s respective apis. hosted on vercel + supabase<br/>
-                      </p>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                      <iframe src={"https://untitled-moviesite.vercel.app"}/>
-                  </AccordionContent>
+              <AccordionItem value="item-1" className={"relative overflow-hidden"}>
+                  <iframe className={"z-0 absolute h-[75vh] w-[75vw]"} src={"https://untitled-moviesite.vercel.app"}/>
+                  <div className={"relative z-10"}>
+                      <AccordionTrigger>
+                          <p>
+                              <Badge variant={"destructive"}>wip</Badge> <br/>
+                              <GenericBadge text={"vue"}/> <GenericBadge text={"nuxt"}/> <PostgresQLBadge/> <TailwindBadge/> <ShadcnBadge/> <GitBadge/> <br/>
+                              movie data aggregator site <br/>
+                              - wraps <GenericBadge text={"omdb"}/>, <GenericBadge text={"tmdb"}/>, and <GenericBadge text={"wikidata"}/>&#39;s respective apis. hosted using <VercelSupabaseBadge/><br/>
+                          </p>
+                      </AccordionTrigger>
+                      <AccordionContent className={"h-[75vh]"}/>
+                  </div>
               </AccordionItem>
               <AccordionItem value="item-2">
                   <AccordionTrigger>
                       <p>
                           <NextBadge/> <TailwindBadge/> <ShadcnBadge/> <GenericBadge text={"typescript"}/> <GitBadge/> <br/>
                           minecraft resource pack updater + utility mod showcase site <br/>
-                          - pack-updater: fully client-side webworker-based solution for quickly updating resource packs from 1.7&#39;s version 1 to 1.21.4&#39;s version 46<br/>
-                          - pvp-utils: hosts information for the mod and integrates with modrinth&#39;s api to keep it&#39;s modrinth page updated<br/>
-                          - hosted on vercel + supabase
+                          - pack-updater: fully client-side webworker-based solution for quickly updating resource packs from 1.7&#39;s version 1 format to 1.21.4&#39;s version 46 format<br/>
+                          - pvp-utils: hosts information for the mod and integrates with <ModrinthBadge/>&#39;s api to keep it&#39;s page updated<br/>
+                          - hosted using <VercelSupabaseBadge/>
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -38,7 +39,7 @@ export default function Home() {
                       <p>
                           <JavaBadge/> <GenericBadge text={"mixin"}/> <GitBadge/> <br/>
                           minecraft utility mod <br/>
-                          - uses fabric&#39;s mod framework to implement a variety of pvp-related features. hosted on modrinth<br/>
+                          - uses <GenericBadge text={"fabric"}/>&#39;s mod framework to implement a variety of pvp-related features. hosted on <ModrinthBadge/><br/>
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -50,7 +51,7 @@ export default function Home() {
                       <p>
                           <GenericBadge text={"golang"}/> <GenericBadge text="html"/> <GenericBadge text={"css"}/> <GenericBadge text={"javascript"}/> <PostgresQLBadge/> <LinuxBadge/> <GitBadge/> <br/>
                           minecraft server network site <br/>
-                          - was hosted on ovh
+                          - was hosted on <OvhBadge/>
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -62,7 +63,7 @@ export default function Home() {
                       <p>
                           <JavaBadge/> <PostgresQLBadge/> <GenericBadge text={"sqlite"}/> <LinuxBadge/> <GitBadge/> <br/>
                           minecraft server network <br/>
-                          - uses paper&#39;s plugin framework. was hosted on ovh<br/>
+                          - uses <GenericBadge text={"paper"}/>&#39;s plugin framework. was hosted on <OvhBadge/><br/>
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -136,4 +137,17 @@ function ShadcnBadge() {
 }
 function LinuxBadge() {
     return <Badge>linux</Badge>;
+}
+function VercelSupabaseBadge() {
+    return (
+        <>
+            <Badge>vercel</Badge> + <Badge>supabase</Badge>
+        </>
+    )
+}
+function OvhBadge() {
+    return <Badge>ovh</Badge>;
+}
+function ModrinthBadge() {
+    return <GenericBadge text={"modrinth"}/>
 }

@@ -1,6 +1,6 @@
 >handle potpissers site being offline + plan it being online
 >descriptions
->hyperlink apis and frameworks etc.
+>iframe for accordion headers that integrates with the dropdown
 
 >tier the badges based on importance. blue -> lighter?
 >github api to set the .readme?
