@@ -1,7 +1,7 @@
 >handle potpissers site being offline + plan it being online
 >descriptions
->iframe for accordion headers that integrates with the dropdown
 
+>entire site background changing based on current center project
 >tier the badges based on importance. blue -> lighter?
 >github api to set the .readme?
 >allow sorting by badges
