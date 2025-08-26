@@ -1,3 +1,8 @@
->description for each
 >handle potpissers site being offline + plan it being online
+>descriptions
+>hyperlink apis and frameworks etc.
+
+>tier the badges based on importance. blue -> lighter?
 >github api to set the .readme?
+>allow sorting by badges
+>fetch project line count + other data from github

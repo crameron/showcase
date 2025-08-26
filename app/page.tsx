@@ -1,47 +1,18 @@
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {Badge} from "@/components/ui/badge";
 
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        {/*<ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">*/}
-        {/*  <li className="mb-2 tracking-[-.01em]">*/}
-        {/*    Get started by editing{" "}*/}
-        {/*    <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">*/}
-        {/*      app/page.tsx*/}
-        {/*    </code>*/}
-        {/*    .*/}
-        {/*  </li>*/}
-        {/*  <li className="tracking-[-.01em]">*/}
-        {/*    Save and see your changes instantly.*/}
-        {/*  </li>*/}
-        {/*</ol>*/}
-
-        {/*<div className="flex gap-4 items-center flex-col sm:flex-row">*/}
-        {/*  <a*/}
-        {/*    className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"*/}
-        {/*    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"*/}
-        {/*    target="_blank"*/}
-        {/*    rel="noopener noreferrer"*/}
-        {/*  >*/}
-        {/*    Deploy now*/}
-        {/*  </a>*/}
-        {/*  <a*/}
-        {/*    className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"*/}
-        {/*    href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"*/}
-        {/*    target="_blank"*/}
-        {/*    rel="noopener noreferrer"*/}
-        {/*  >*/}
-        {/*    Read our docs*/}
-        {/*  </a>*/}
-        {/*</div>*/}
           <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                   <AccordionTrigger>
                       <p>
-                          unfinished movie data aggregator site: <br/>
-                          - wraps omdb, tmdb, and wikidata (sparql) &#39;s apis<br/>
-                          - built with postgresql, nuxt.js, tailwind, and shadcn-vue. hosted on vercel + supabase
+                          <Badge variant={"destructive"}>wip</Badge> <br/>
+                          <GenericBadge text={"vue"}/> <GenericBadge text={"nuxt"}/> <PostgresQLBadge/> <TailwindBadge/> <ShadcnBadge/> <GitBadge/> <br/>
+                          movie data aggregator site <br/>
+                          - wraps omdb, tmdb, and wikidata&#39;s respective apis. hosted on vercel + supabase<br/>
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -51,10 +22,11 @@ export default function Home() {
               <AccordionItem value="item-2">
                   <AccordionTrigger>
                       <p>
-                          minecraft resource pack updater + utility mod showcase site: <br/>
-                          - pack-updater: my full client-side web worker-based solution for updating resource packs from 1.7&#39;s version 1 to 1.21.4&#39;s version 46<br/>
-                          - pvp-utils: hosts information for my mod and integrates with modrinth&#39;s api to keep it&#39;s modrinth page updated<br/>
-                          - built with next.js, tailwind, and shadcn. hosted on vercel + supabase
+                          <NextBadge/> <TailwindBadge/> <ShadcnBadge/> <GenericBadge text={"typescript"}/> <GitBadge/> <br/>
+                          minecraft resource pack updater + utility mod showcase site <br/>
+                          - pack-updater: fully client-side webworker-based solution for quickly updating resource packs from 1.7&#39;s version 1 to 1.21.4&#39;s version 46<br/>
+                          - pvp-utils: hosts information for the mod and integrates with modrinth&#39;s api to keep it&#39;s modrinth page updated<br/>
+                          - hosted on vercel + supabase
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -64,38 +36,33 @@ export default function Home() {
               <AccordionItem value="item-3">
                   <AccordionTrigger>
                       <p>
-                          minecraft utility mod: <br/>
-                          - uses fabric&#39;s modding framework to implement a variety of pvp-related features<br/>
-                          - built with java. hosted on modrinth
+                          <JavaBadge/> <GenericBadge text={"mixin"}/> <GitBadge/> <br/>
+                          minecraft utility mod <br/>
+                          - uses fabric&#39;s mod framework to implement a variety of pvp-related features. hosted on modrinth<br/>
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
                       <iframe src={"https://pvputils.vercel.app/fabric-pvp-utils"}/>
                   </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-4">
+              <AccordionItem value="item-10">
                   <AccordionTrigger>
                       <p>
-                          project showcase site: <br/>
-                          - built with next.js, tailwind, and shadcn. hosted on vercel
+                          <GenericBadge text={"golang"}/> <GenericBadge text="html"/> <GenericBadge text={"css"}/> <GenericBadge text={"javascript"}/> <PostgresQLBadge/> <LinuxBadge/> <GitBadge/> <br/>
+                          minecraft server network site <br/>
+                          - was hosted on ovh
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
-                      <iframe src={"https://super-showcase.vercel.app"}/>
+                      {/*TODO -> potpissers-web*/}
                   </AccordionContent>
               </AccordionItem>
-              {/*<AccordionItem value="item-9">*/}
-              {/*    <AccordionTrigger>leetcode</AccordionTrigger>*/}
-              {/*    <AccordionContent>*/}
-              {/*        /!*TODO -> leetcode profile?*!/*/}
-              {/*    </AccordionContent>*/}
-              {/*</AccordionItem>TODO remove*/}
               <AccordionItem value="item-100">
                   <AccordionTrigger>
                       <p>
-                          minecraft server network: <br/>
-                          - paper&#39;s plugin framework<br/>
-                          - built with java, postgresql, and sqlite. was hosted on ovh
+                          <JavaBadge/> <PostgresQLBadge/> <GenericBadge text={"sqlite"}/> <LinuxBadge/> <GitBadge/> <br/>
+                          minecraft server network <br/>
+                          - uses paper&#39;s plugin framework. was hosted on ovh<br/>
                       </p>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -106,17 +73,6 @@ export default function Home() {
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                               referrerPolicy="strict-origin-when-cross-origin"
                               allowFullScreen/>
-                  </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-10">
-                  <AccordionTrigger>
-                      <p>
-                          minecraft server network site: <br/>
-                          - built with javascript, css, and golang. was hosted on ovh
-                      </p>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                      {/*TODO -> potpissers-web*/}
                   </AccordionContent>
               </AccordionItem>
           </Accordion>
@@ -149,4 +105,35 @@ export default function Home() {
       {/*</footer>*/}
     </div>
   );
+}
+function GenericBadge({text}: {text: string}) {
+    return <Badge>{text}</Badge>;
+}
+function GitBadge() {
+    return <Badge>git</Badge>;
+}
+function PostgresQLBadge() {
+    return <Badge>postgresql</Badge>;
+}
+function JavaBadge() {
+    return <Badge>java</Badge>;
+}
+function ReactBadge() {
+    return <Badge>react</Badge>;
+}
+function NextBadge() {
+    return (
+        <>
+            <ReactBadge/> <Badge>next</Badge>
+        </>
+    )
+}
+function TailwindBadge() {
+    return <Badge>tailwind</Badge>;
+}
+function ShadcnBadge() {
+    return <Badge>shadcn</Badge>;
+}
+function LinuxBadge() {
+    return <Badge>linux</Badge>;
 }
