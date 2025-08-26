@@ -5,11 +5,9 @@ import {Badge} from "@/components/ui/badge";
 
 export default function ShowcaseAccordion() {
     return <Accordion type="single" collapsible>
-        <div className={"absolute overflow-hidden"}>
-            <iframe src={"https://untitled-moviesite.vercel.app"}/>
-        </div>
-        <AccordionItem value="item-1" className={"relative z-10 overflow-hidden"}>
-            <AccordionTrigger>
+        <AccordionItem value="item-1" className={"relative overflow-hidden"}>
+            <iframe className={"absolute"} src={"https://untitled-moviesite.vercel.app"}/>
+            <AccordionTrigger className={"relative"}>
                 <p>
                     <Badge variant={"destructive"}>wip</Badge> <br/>
                     <GenericBadge text={"vue"}/> <GenericBadge text={"nuxt"}/> <PostgresQLBadge/> <TailwindBadge/> <ShadcnBadge/> <GitBadge/> <br/>
@@ -18,7 +16,7 @@ export default function ShowcaseAccordion() {
                 </p>
             </AccordionTrigger>
             <AccordionContent>
-                <iframe src={"https://untitled-moviesite.vercel.app"}/>
+                {/*<iframe src={"https://untitled-moviesite.vercel.app"}/>*/}
             </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
