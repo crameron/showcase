@@ -93,14 +93,12 @@ export default function Home() {
                               <br/>
                               minecraft server network <br/>
                               - my first project. Comprised of: <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericBadge text={"paper"}/>&#39;s framework. all of these plugins share an upstream <SourceBadge source={"null"}/> <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<SourceBadge source={"null"}/>) <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} practice (hcf) (<SourceBadge source={"null"}/>) <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<SourceBadge source={"null"}/>) <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} practice (dayZ) (<SourceBadge source={"null"}/>) <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<SourceBadge source={"null"}/>), forked from <GenericBadge text={"purpur"}/> <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<SourceBadge source={"null"}/>) for paper&#39;s <GenericBadge text={"velocity"}/> server proxy <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<SourceBadge source={"null"}/>)<br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericBadge text={"paper"}/>&#39;s framework. these plugins share an upstream <SourceBadge source={"https://github.com/potpissers/Potpissers-upstream"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<SourceBadge source={"https://github.com/potpissers/Potpissers-cubecore"}/>) <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<SourceBadge source={"https://github.com/potpissers/Potpissers-kollusion"}/>) <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<SourceBadge source={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericBadge text={"purpur"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<SourceBadge source={"https://github.com/potpissers/Potpissers-velocity"}/>) for paper&#39;s <GenericBadge text={"velocity"}/> server proxy <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<SourceBadge source={"https://github.com/potpissers/Potpissers-postgres"}/>)<br/>
                               - was all hosted on <OvhBadge/><br/>
                           </p>
                       )
@@ -208,5 +206,7 @@ function ShowcaseYoutubeIFrame({source}: { source: string }) {
 }
 
 function SourceBadge({source}: { source: string }) {
-    return <GenericBadge text={"source"}/>
+    return <a href={source}>
+        <GenericBadge text={"source"}/>
+    </a>
 }
