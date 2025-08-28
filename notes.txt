@@ -17,6 +17,7 @@
 >fetch project line count + other data from github
 >accordiontrigger shouldn't underline when mousing over badges that hold links
 >github logo for source, org etc.
+>have the blurred accordion triggers cut off early, clicking on it expands it etc.
 
 >showcase site source code as the background?
 >entire site background changing based on current center project
