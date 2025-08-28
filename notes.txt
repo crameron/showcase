@@ -1,12 +1,23 @@
 >handle potpissers site being offline + plan it being online
->descriptions
 >regular pages scroll is disabled when accordion is open
 >set up centering for project when selected
 >set up auto-scrolling for trigger backgrounds
 >white space above iframe so that it can be seen when selected
-
->entire site background changing based on current center project
+>movie site:
+    >user profiles etc.
+    >notifications
+    >finish description data
+>pvputils site:
+    >start at black and fade background to white?
+    >fade in effects
+    >animated favicon?
+>favicon: 16x16 my face?
 >tier the badges based on importance. blue -> lighter?
 >github api to set the .readme?
->allow sorting by badges
 >fetch project line count + other data from github
+>accordiontrigger shouldn't underline when mousing over badges that hold links
+>github logo for source, org etc.
+
+>showcase site source code as the background?
+>entire site background changing based on current center project
+>allow sorting by badges

@@ -9,8 +9,10 @@ export default function Home() {
               {
                   [{
                       name: "untitled-moviesite",
+                      heightBypass: false,
                       isWip: true,
                       source: null,
+                      organization: null,
                       iframe: (
                           <iframe className={"absolute"} src={"https://untitled-moviesite.vercel.app/"}/>
                       ),
@@ -25,8 +27,10 @@ export default function Home() {
                       )
                   }, {
                       name: "pvp-utils-site",
+                      heightBypass: false,
                       isWip: false,
                       source: "https://github.com/memeasaur/pvputils-web",
+                      organization: null,
                       iframe: (
                           <iframe className={"absolute"} src={"https://pvputils.vercel.app/"}/>
                       ),
@@ -43,8 +47,10 @@ export default function Home() {
                       )
                   }, {
                       name: "fabric-pvp-utils",
+                      heightBypass: false,
                       isWip: false,
                       source: "https://github.com/pvputils/fabricpvputils-oss",
+                      organization: null,
                       iframe: (
                           <ShowcaseYoutubeIFrame source={"youtube.com"}/>
                       ),
@@ -58,8 +64,10 @@ export default function Home() {
                       )
                   }, {
                       name: "potpissers-web",
+                      heightBypass: false,
                       isWip: false,
                       source: "https://github.com/potpissers/Potpissers-web",
+                      organization: null,
                       iframe: (
                           <iframe className={"absolute"} src={"https://www.youtube.com/"}/>
                       ),
@@ -73,40 +81,48 @@ export default function Home() {
                       )
                   }, {
                       name: "potpissers",
+                      heightBypass: true,
                       isWip: false,
-                      source: "https://github.com/orgs/potpissers/repositories",
+                      source: null,
+                      organization: "https://github.com/orgs/potpissers/repositories",
                       iframe: (
                           <ShowcaseYoutubeIFrame source={"https://www.youtube.com/embed/XCERSWZMcac"}/>
                       ), content: (
                           <p>
-                              <JavaBadge/> <PostgresQLBadge/> <GenericBadge text={"sqlite"}/> <LinuxBadge/> <GitBadge/>
+                              <JavaBadge/> <PostgresQLBadge/> <GenericBadge text={"sqlite"}/> <GenericBadge text={"git patches"}/> <LinuxBadge/> <GitBadge/>
                               <br/>
                               minecraft server network <br/>
-                              - uses <GenericBadge text={"paper"}/>&#39;s plugin framework. was hosted
-                              on <OvhBadge/><br/>
+                              - my first project. Comprised of: <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericBadge text={"paper"}/>&#39;s framework. all of these plugins share an upstream <SourceBadge source={"null"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<SourceBadge source={"null"}/>) <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} practice (hcf) (<SourceBadge source={"null"}/>) <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<SourceBadge source={"null"}/>) <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} practice (dayZ) (<SourceBadge source={"null"}/>) <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<SourceBadge source={"null"}/>), forked from <GenericBadge text={"purpur"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<SourceBadge source={"null"}/>) for paper&#39;s <GenericBadge text={"velocity"}/> server proxy <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<SourceBadge source={"null"}/>)<br/>
+                              - was all hosted on <OvhBadge/><br/>
                           </p>
                       )
                   }
                   ].map((entry) => (
-                      <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden"}>
+                      <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden w-[85vw]"}>
                           {entry.iframe}
-                          <AccordionTrigger className={"relative z-10"} style={{
+                          <AccordionTrigger className={`relative z-10${entry.heightBypass ? "" : " h-[30vh]"}`} style={{
                               backdropFilter: "blur(1vw)",
                               backgroundColor: "rgba(255, 255, 255, 0.65)",
-                              borderRadius: "1vw",
                               padding: "1vw"
                           }}>
                               <div className={"flex flex-col w-full"}>
                                   <div className={"flex"}>
                                       {entry.isWip && (<Badge variant={"destructive"}>wip</Badge>)}
-                                      {entry.source && (<GenericBadge text={"github"}/>)}
+                                      {entry.source && (<SourceBadge source={"null"}/>)}
+                                      {entry.organization && (<GenericBadge text={"organization"}/>)}
                                   </div>
                                   {entry.content}
                               </div>
                           </AccordionTrigger>
-                          <AccordionContent className={"h-[85vh] w-[85vw]"}>
-                              {/*<iframe src={"https://untitled-moviesite.vercel.app"}TODO remove/>*/}
-                          </AccordionContent>
+                          <AccordionContent className={"h-[85vh] w-[85vw]"}/>
                       </AccordionItem>
                   ))
               }
@@ -179,7 +195,7 @@ function ShadcnBadge() {
 }
 
 function LinuxBadge() {
-    return <Badge>linux</Badge>;
+    return <Badge>linux/shell</Badge>;
 }
 
 function VercelSupabaseBadge() {
@@ -204,4 +220,8 @@ function ShowcaseYoutubeIFrame({source}: { source: string }) {
                    src={`${source}?autoplay=1&mute=1&loop=1`}
                    allow="autoplay"
                    allowFullScreen/>
+}
+
+function SourceBadge({source}: { source: string }) {
+    return <GenericBadge text={"source"}/>
 }
