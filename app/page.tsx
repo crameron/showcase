@@ -106,18 +106,18 @@ export default function Home() {
                   ].map((entry) => (
                       <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden w-[85vw]"}>
                           {entry.iframe}
-                          <AccordionTrigger className={`relative z-10${entry.heightBypass ? "" : " h-[30vh]"}`} style={{
+                          <AccordionTrigger className={`relative z-10${entry.heightBypass ? "" : " h-[20vh]"}`} style={{
                               backdropFilter: "blur(1vw)",
                               backgroundColor: "rgba(255, 255, 255, 0.65)",
                               padding: "1vw"
                           }}>
                               <div className={"flex flex-col w-full"}>
-                                  <div className={"flex"}>
-                                      {entry.isWip && (<Badge variant={"destructive"}>wip</Badge>)}
+                                  {entry.isWip && (<Badge variant={"destructive"}>wip</Badge>)}
+                                  <div className={"flex justify-between"}>
+                                      {entry.content}
                                       {entry.source && (<SourceBadge source={"null"}/>)}
                                       {entry.organization && (<GenericBadge text={"organization"}/>)}
                                   </div>
-                                  {entry.content}
                               </div>
                           </AccordionTrigger>
                           <AccordionContent className={"h-[85vh] w-[85vw]"}/>

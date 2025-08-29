@@ -1,4 +1,4 @@
->handle potpissers site being offline + plan it being online
+>handle potpissers site being offline + online
 >regular pages scroll is disabled when accordion is open
 >set up centering for project when selected
 >set up auto-scrolling for trigger backgrounds
@@ -11,7 +11,6 @@
     >start at black and fade background to white?
     >fade in effects
     >animated favicon?
->favicon: 16x16 my face?
 >tier the badges based on importance. blue -> lighter?
 >github api to set the .readme?
 >fetch project line count + other data from github
