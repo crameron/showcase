@@ -19,6 +19,7 @@
 >have the blurred accordion triggers cut off early, clicking on it expands it etc.
 >show/handle closed source pvputils soft cheats
 
+>the accordion trigger height change is bad
 >showcase site source code as the background?
 >entire site background changing based on current center project
 >allow sorting by badges

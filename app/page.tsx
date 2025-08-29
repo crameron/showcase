@@ -1,5 +1,6 @@
 import {Badge} from "@/components/ui/badge";
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {Accordion, AccordionContent, AccordionItem} from "@/components/ui/accordion";
+import ShowcaseAccordionTrigger from "@/components/ShowcaseAccordionTrigger";
 
 export default function Home() {
   return (
@@ -9,7 +10,6 @@ export default function Home() {
               {
                   [{
                       name: "untitled-moviesite",
-                      heightBypass: false,
                       isWip: true,
                       source: null,
                       organization: null,
@@ -21,13 +21,12 @@ export default function Home() {
                               <GenericBadge text={"vue"}/> <GenericBadge text={"nuxt"}/> <PostgresQLBadge/>
                               <TailwindBadge/> <ShadcnBadge/> <GitBadge/> <br/>
                               movie data aggregator site <br/>
-                              - wraps <GenericBadge text={"omdb"}/>, <GenericBadge text={"tmdb"}/>, and <GenericBadge
-                              text={"wikidata"}/>&#39;s respective apis. hosted using <VercelSupabaseBadge/><br/>
+                              - wraps <GenericBadge text={"omdb"} variant={"secondary"}/>, <GenericBadge text={"tmdb"} variant={"secondary"}/>, and <GenericBadge
+                              text={"wikidata"} variant={"secondary"}/>&#39;s respective apis. hosted using <VercelSupabaseBadge/><br/>
                           </p>
                       )
                   }, {
                       name: "pvp-utils-site",
-                      heightBypass: false,
                       isWip: false,
                       source: "https://github.com/memeasaur/pvputils-web",
                       organization: null,
@@ -47,7 +46,6 @@ export default function Home() {
                       )
                   }, {
                       name: "fabric-pvp-utils",
-                      heightBypass: false,
                       isWip: false,
                       source: "https://github.com/pvputils/fabricpvputils-oss",
                       organization: null,
@@ -58,13 +56,12 @@ export default function Home() {
                           <p>
                               <JavaBadge/> <GenericBadge text={"mixin"}/> <GitBadge/> <br/>
                               minecraft utility mod <br/>
-                              - uses <GenericBadge text={"fabric"}/>&#39;s mod framework to implement a variety of
+                              - uses <GenericBadge text={"fabric"} variant={"secondary"}/>&#39;s mod framework to implement a variety of
                               pvp-related features. hosted on <ModrinthBadge/><br/>
                           </p>
                       )
                   }, {
                       name: "potpissers-web",
-                      heightBypass: false,
                       isWip: false,
                       source: "https://github.com/potpissers/Potpissers-web",
                       organization: null,
@@ -81,7 +78,6 @@ export default function Home() {
                       )
                   }, {
                       name: "potpissers",
-                      heightBypass: true,
                       isWip: false,
                       source: null,
                       organization: "https://github.com/orgs/potpissers/repositories",
@@ -93,34 +89,28 @@ export default function Home() {
                               <br/>
                               minecraft server network <br/>
                               - my first project. Comprised of: <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericBadge text={"paper"}/>&#39;s framework. these plugins share an upstream <SourceBadge source={"https://github.com/potpissers/Potpissers-upstream"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericBadge text={"paper"} variant={"secondary"}/>&#39;s framework. these plugins share an upstream <SourceBadge source={"https://github.com/potpissers/Potpissers-upstream"}/> <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<SourceBadge source={"https://github.com/potpissers/Potpissers-cubecore"}/>) <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<SourceBadge source={"https://github.com/potpissers/Potpissers-kollusion"}/>) <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<SourceBadge source={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericBadge text={"purpur"}/> <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<SourceBadge source={"https://github.com/potpissers/Potpissers-velocity"}/>) for paper&#39;s <GenericBadge text={"velocity"}/> server proxy <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<SourceBadge source={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericBadge text={"purpur"} variant={"secondary"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<SourceBadge source={"https://github.com/potpissers/Potpissers-velocity"}/>) for paper&#39;s <GenericBadge text={"velocity"} variant={"secondary"}/> server proxy <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<SourceBadge source={"https://github.com/potpissers/Potpissers-postgres"}/>)<br/>
                               - was all hosted on <OvhBadge/><br/>
                           </p>
                       )
                   }
                   ].map((entry) => (
-                      <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden w-[85vw]"}>
+                      <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden w-[90vw]"}>
                           {entry.iframe}
-                          <AccordionTrigger className={`relative z-10${entry.heightBypass ? "" : " h-[20vh]"}`} style={{
-                              backdropFilter: "blur(1vw)",
-                              backgroundColor: "rgba(255, 255, 255, 0.65)",
-                              padding: "1vw"
-                          }}>
-                              <div className={"flex flex-col w-full"}>
-                                  {entry.isWip && (<Badge variant={"destructive"}>wip</Badge>)}
-                                  <div className={"flex justify-between"}>
-                                      {entry.content}
-                                      {entry.source && (<SourceBadge source={"null"}/>)}
-                                      {entry.organization && (<GenericBadge text={"organization"}/>)}
-                                  </div>
+                          <ShowcaseAccordionTrigger>
+                              <div className={"h-full w-full flex justify-between"} >
+                                  {entry.content}
+                                  {entry.isWip && (<a><Badge variant={"destructive"}>wip</Badge></a>)} {/*TODO div*/}
+                                  {entry.source && (<SourceBadge source={entry.source}/>)}
+                                  {entry.organization && (<a href={entry.organization}><GenericBadge text={"organization"}/></a>)}
                               </div>
-                          </AccordionTrigger>
-                          <AccordionContent className={"h-[85vh] w-[85vw]"}/>
+                          </ShowcaseAccordionTrigger>
+                          <AccordionContent className={"h-[90vh] w-[90vw]"}/>
                       </AccordionItem>
                   ))
               }
@@ -141,8 +131,8 @@ export default function Home() {
   );
 }
 
-function GenericBadge({text}: { text: string }) {
-    return <Badge>{text}</Badge>;
+function GenericBadge({text, variant = "default"}: { text: string; variant?: "default" | "destructive" | "outline" | "secondary" }) {
+    return <Badge variant={variant}>{text}</Badge>;
 }
 
 function GitBadge() {
@@ -184,17 +174,17 @@ function LinuxBadge() {
 function VercelSupabaseBadge() {
     return (
         <>
-            <Badge>vercel</Badge> + <Badge>supabase</Badge>
+            <GenericBadge text={"vercel"} variant={"secondary"}/> + <GenericBadge text={"supabase"} variant={"secondary"}/>
         </>
     )
 }
 
 function OvhBadge() {
-    return <Badge>ovh</Badge>;
+    return <GenericBadge text={"ovh"} variant={"secondary"}/>;
 }
 
 function ModrinthBadge() {
-    return <GenericBadge text={"modrinth"}/>
+    return <GenericBadge text={"modrinth"} variant={"secondary"}/>
 }
 
 function ShowcaseYoutubeIFrame({source}: { source: string }) {
