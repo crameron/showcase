@@ -11,13 +11,10 @@
     >use current.scrollIntoView({ behavior: "smooth", block: "start" });
 >github api to set the .readme?
 >fetch project line count + other data from github
->github logo for source, org etc.
 
 >set up auto-scrolling for trigger backgrounds
 >white space above iframe so that it can be seen when selected
->tier the badges based on importance. blue -> lighter?
 >accordiontrigger shouldn't underline when mousing over badges that hold links
->set up centering for project when selected
 >regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
 
 >the accordion trigger height change is bad

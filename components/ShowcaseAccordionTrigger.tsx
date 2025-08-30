@@ -8,7 +8,7 @@ const foo = "h-[17vh]"
 export default function ShowcaseAccordionTrigger({ children }: {children?: React.ReactNode;}) {
     return <AccordionTrigger className={`relative ` + foo} style={{
         backdropFilter: "blur(1vw)",
-        backgroundColor: "rgba(255, 255, 255, 0.65)",
+        backgroundColor: "rgba(255, 255, 255, 0.75)",
         padding: "1vw"
     }} onClick={e => {
         const current = e.currentTarget
