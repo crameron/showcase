@@ -5,8 +5,8 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[auto_1fr_auto] items-center justify-items-center"> {/*TODO min-h-screen p-8 pb-20 gap-16 sm:p-20*/}
-      <main className="flex flex-col row-start-2 items-center sm:items-start"> {/*TODO gap-[32px]*/}
+    <div className="grid min-h-screen place-items-center"> {/*TODO p-8 pb-20 gap-16 sm:p-20*/}
+      <main className="flex flex-col items-center sm:items-start"> {/*TODO gap-[32px]*/}
           <Accordion type="single" collapsible>
               {
                   [{
@@ -115,7 +115,7 @@ export default function Home() {
               }
           </Accordion>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="justify-self-end">
         {/*<a*/}
         {/*  className="flex items-center gap-2 hover:underline hover:underline-offset-4"*/}
         {/*  href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"*/}

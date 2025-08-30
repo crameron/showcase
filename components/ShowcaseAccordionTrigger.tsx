@@ -14,6 +14,7 @@ export default function ShowcaseAccordionTrigger({ children }: {children?: React
         const current = e.currentTarget
         if (!current.classList.contains(foo))
             current.classList.add(foo) // TODO share animation with accordion
+            // TODO -> this isn't handling it being closed by another one being activated. i need to iterate over all of them or something
         else {
             current.classList.remove(foo)
             current.scrollIntoView({ behavior: "smooth", block: "start" });
