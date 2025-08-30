@@ -1,8 +1,4 @@
 >handle potpissers site being offline + online
->regular pages scroll is disabled when accordion is open
->set up centering for project when selected
->set up auto-scrolling for trigger backgrounds
->white space above iframe so that it can be seen when selected
 >movie site:
     >user profiles etc.
     >notifications
@@ -11,13 +7,18 @@
     >start at black and fade background to white?
     >fade in effects
     >animated favicon?
->tier the badges based on importance. blue -> lighter?
+    >show/handle closed source pvputils soft cheats
+    >use current.scrollIntoView({ behavior: "smooth", block: "start" });
 >github api to set the .readme?
 >fetch project line count + other data from github
->accordiontrigger shouldn't underline when mousing over badges that hold links
 >github logo for source, org etc.
->have the blurred accordion triggers cut off early, clicking on it expands it etc.
->show/handle closed source pvputils soft cheats
+
+>set up auto-scrolling for trigger backgrounds
+>white space above iframe so that it can be seen when selected
+>tier the badges based on importance. blue -> lighter?
+>accordiontrigger shouldn't underline when mousing over badges that hold links
+>set up centering for project when selected
+>regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
 
 >the accordion trigger height change is bad
 >showcase site source code as the background?

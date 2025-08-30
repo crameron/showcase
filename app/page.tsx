@@ -88,7 +88,7 @@ export default function Home() {
                               <JavaBadge/> <PostgresQLBadge/> <GenericBadge text={"sqlite"}/> <GenericBadge text={"git patches"}/> <LinuxBadge/> <GitBadge/>
                               <br/>
                               minecraft server network <br/>
-                              - my first project. Comprised of: <br/>
+                              - first project. comprised of: <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericBadge text={"paper"} variant={"secondary"}/>&#39;s framework. these plugins share an upstream <SourceBadge source={"https://github.com/potpissers/Potpissers-upstream"}/> <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<SourceBadge source={"https://github.com/potpissers/Potpissers-cubecore"}/>) <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<SourceBadge source={"https://github.com/potpissers/Potpissers-kollusion"}/>) <br/>
@@ -190,7 +190,7 @@ function ModrinthBadge() {
 function ShowcaseYoutubeIFrame({source}: { source: string }) {
     return <iframe width="560" height="315"
                    className={"absolute"}
-                   src={`${source}?autoplay=1&mute=1&loop=1`}
+                   src={`${source}?autoplay=1&mute=1&loop=1&controls=0&playlist=${source.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/)}`} // TODO ai made this
                    allow="autoplay"
                    allowFullScreen/>
 }

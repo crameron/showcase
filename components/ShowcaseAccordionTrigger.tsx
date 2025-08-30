@@ -14,8 +14,10 @@ export default function ShowcaseAccordionTrigger({ children }: {children?: React
         const current = e.currentTarget
         if (!current.classList.contains(foo))
             current.classList.add(foo) // TODO share animation with accordion
-        else
+        else {
             current.classList.remove(foo)
+            current.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
     }}>
         {children}
     </AccordionTrigger>
