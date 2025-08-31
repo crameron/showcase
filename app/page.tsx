@@ -2,11 +2,12 @@ import {Badge} from "@/components/ui/badge";
 import {Accordion, AccordionContent, AccordionItem} from "@/components/ui/accordion";
 import ShowcaseAccordionTrigger from "@/components/ShowcaseAccordionTrigger";
 import React from "react";
+import GenericLinkBadge from "@/components/GenericLinkBadge";
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen place-items-center"> {/*TODO p-8 pb-20 gap-16 sm:p-20*/}
-      <main className="flex flex-col items-center sm:items-start"> {/*TODO gap-[32px]*/}
+    <div className="grid grid-rows-[1fr_auto_1fr] min-h-screen place-items-center"> {/*TODO p-8 pb-20 gap-16 sm:p-20*/}
+      <main className="flex flex-col row-start-2 items-center sm:items-start"> {/*TODO gap-[32px]*/}
           <Accordion type="single" collapsible>
               {
                   [{
@@ -14,14 +15,14 @@ export default function Home() {
                       isWip: true,
                       source: null,
                       organization: null,
-                      iframe: (
+                      absoluteIframe: (
                           <iframe className={"absolute"} src={"https://untitled-moviesite.vercel.app/"}/>
                       ),
                       content: (
                           <p>
                               <GenericBadge text={"vue"} color={"bg-sky-200"}/> <GenericBadge text={"nuxt"} color={"bg-sky-200"}/> <PostgresQLBadge color={"bg-sky-100"}/> <TailwindBadge/> <ShadcnBadge/> <GitBadge/> <br/>
                               movie data aggregator site <br/>
-                              - wraps <GenericBadge text={"omdb"} link={"https://www.omdbapi.com/"}/>, <GenericBadge text={"tmdb"} link={"https://developer.themoviedb.org/docs/getting-started"}/>, and <GenericBadge
+                              - wraps <GenericLinkBadge text={"omdb"} link={"https://www.omdbapi.com/"}/>, <GenericLinkBadge text={"tmdb"} link={"https://developer.themoviedb.org/docs/getting-started"}/>, and <GenericLinkBadge
                               text={"wikidata"} link={"https://www.wikidata.org/wiki/Wikidata:Main_Page"}/>&#39;s respective apis. hosted using <VercelSupabaseBadge/><br/>
                           </p>
                       )
@@ -30,7 +31,7 @@ export default function Home() {
                       isWip: false,
                       source: "https://github.com/memeasaur/pvputils-web",
                       organization: null,
-                      iframe: (
+                      absoluteIframe: (
                           <iframe className={"absolute"} src={"https://pvputils.vercel.app/"}/>
                       ),
                       content: (
@@ -49,14 +50,14 @@ export default function Home() {
                       isWip: false,
                       source: "https://github.com/pvputils/fabricpvputils-oss",
                       organization: null,
-                      iframe: (
+                      absoluteIframe: (
                           <ShowcaseYoutubeIFrame source={"youtube.com"}/>
                       ),
                       content: (
                           <p>
                               <JavaBadge/> <GenericBadge text={"mixin"} color={"bg-sky-200"}/> <GitBadge color={"bg-sky-100"}/> <br/>
                               minecraft utility mod <br/>
-                              - uses <GenericBadge text={"fabric"} link={"https://fabricmc.net/"}/>&#39;s mod framework to implement a variety of
+                              - uses <GenericLinkBadge text={"fabric"} link={"https://fabricmc.net/"}/>&#39;s mod framework to implement a variety of
                               pvp-related features. hosted on <ModrinthBadge/><br/>
                           </p>
                       )
@@ -65,7 +66,7 @@ export default function Home() {
                       isWip: false,
                       source: "https://github.com/potpissers/Potpissers-web",
                       organization: null,
-                      iframe: (
+                      absoluteIframe: (
                           <iframe className={"absolute"} src={"https://www.youtube.com/"}/>
                       ),
                       content: (
@@ -80,7 +81,7 @@ export default function Home() {
                       isWip: false,
                       source: null,
                       organization: "https://github.com/orgs/potpissers/repositories",
-                      iframe: (
+                      absoluteIframe: (
                           <ShowcaseYoutubeIFrame source={"https://www.youtube.com/embed/XCERSWZMcac"}/>
                       ), content: (
                           <p>
@@ -88,11 +89,11 @@ export default function Home() {
                               <br/>
                               minecraft server network <br/>
                               - first project. comprised of: <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. these plugins share an upstream <SourceBadge source={"https://github.com/potpissers/Potpissers-upstream"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. these plugins share an upstream <SourceBadge source={"https://github.com/potpissers/Potpissers-upstream"}/> <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<SourceBadge source={"https://github.com/potpissers/Potpissers-cubecore"}/>) <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<SourceBadge source={"https://github.com/potpissers/Potpissers-kollusion"}/>) <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<SourceBadge source={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
-                              &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<SourceBadge source={"https://github.com/potpissers/Potpissers-velocity"}/>) for paper&#39;s <GenericBadge text={"velocity"} link={"https://papermc.io/software/velocity"}/> server proxy <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<SourceBadge source={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<SourceBadge source={"https://github.com/potpissers/Potpissers-velocity"}/>) for paper&#39;s <GenericLinkBadge text={"velocity"} link={"https://papermc.io/software/velocity"}/> server proxy <br/>
                               &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<SourceBadge source={"https://github.com/potpissers/Potpissers-postgres"}/>)<br/>
                               - was all hosted on <OvhBadge/><br/>
                           </p>
@@ -100,13 +101,13 @@ export default function Home() {
                   }
                   ].map((entry) => (
                       <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden w-[90vw]"}>
-                          {entry.iframe}
+                          {React.cloneElement(entry.absoluteIframe, {className: "absolute ShowcaseIFrame"})}
                           <ShowcaseAccordionTrigger>
                               <div className={"h-full w-full flex justify-between"} >
                                   {entry.content}
                                   {entry.isWip && (<a><GenericBadge text={"wip"} color={"bg-red-200"}/></a>)} {/*TODO div*/}
                                   {entry.source && (<SourceBadge source={entry.source}/>)}
-                                  {entry.organization && (<a href={entry.organization}><GenericBadge text={<>organization <GithubImg/></>} color={"bg-green-100"}/></a>)}
+                                  {entry.organization && (<GenericLinkBadge link={entry.organization} text={<>organization <GithubImg/></>} color={"bg-green-100"}/>)}
                               </div>
                           </ShowcaseAccordionTrigger>
                           <AccordionContent className={"h-[90vh] w-[90vw]"}/>
@@ -115,7 +116,7 @@ export default function Home() {
               }
           </Accordion>
       </main>
-      <footer className="justify-self-end">
+      <footer className="justify-self-end row-start-3">
         {/*<a*/}
         {/*  className="flex items-center gap-2 hover:underline hover:underline-offset-4"*/}
         {/*  href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"*/}
@@ -130,13 +131,13 @@ export default function Home() {
   );
 }
 
-type genericBadgeColors = "bg-sky-100" | "bg-sky-200" | "bg-green-100" | "bg-red-200"
-function GenericBadge({text, color, link}: { text: React.ReactNode; color?: genericBadgeColors; link?: string }) {
-    const badge = <Badge variant={"secondary"} className={color ? color : ""}>{text}</Badge>
-    if (link)
-        return <a href={link}>{badge}</a>
-    else
-        return badge;
+export type genericBadgeColors = "bg-sky-100" | "bg-sky-200" | "bg-green-100" | "bg-red-200"
+export function GenericBadge({text, color, isHoverUnderline}: { text: React.ReactNode; color?: genericBadgeColors; isHoverUnderline?: boolean }) {
+    return <Badge variant={"secondary"} className={(color ? color : "") + (isHoverUnderline ? " hover:underline " : "")}>{text}</Badge>
+}
+
+function SourceBadge({source}: { source: string }) {
+    return <GenericLinkBadge link={source} text={<>source <GithubImg/></>} color={"bg-green-100"}/>
 }
 
 function GitBadge({color} : {color?: genericBadgeColors}) {
@@ -178,33 +179,28 @@ function LinuxBadge({color} : {color?: genericBadgeColors}) {
 function VercelSupabaseBadge() {
     return (
         <>
-            <GenericBadge text={"vercel"} link={"https://vercel.com/"}/> + <GenericBadge text={"supabase"} link={"https://supabase.com/"}/>
+            <GenericLinkBadge text={"vercel"} link={"https://vercel.com/"}/> + <GenericLinkBadge text={"supabase"} link={"https://supabase.com/"}/>
         </>
     )
 }
 
 function OvhBadge() {
-    return <GenericBadge text={"ovh"} link={"https://us.ovhcloud.com/"}/>;
+    return <GenericLinkBadge text={"ovh"} link={"https://us.ovhcloud.com/"}/>;
 }
 
 function ModrinthBadge() {
-    return <GenericBadge text={"modrinth"} link={"https://modrinth.com/"}/>
+    return <GenericLinkBadge text={"modrinth"} link={"https://modrinth.com/"}/>
 }
 
 function ShowcaseYoutubeIFrame({source}: { source: string }) {
     return <iframe width="560" height="315"
-                   className={"absolute"}
                    src={`${source}?autoplay=1&mute=1&loop=1&controls=0&playlist=${source.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/)}`} // TODO ai made this
                    allow="autoplay"
+                   className={"absolute"}
                    allowFullScreen/>
 }
 
-function SourceBadge({source}: { source: string }) {
-    return <a href={source}>
-        <GenericBadge text={<>source <GithubImg/></>} color={"bg-green-100"}/>
-    </a>
-}
-function GithubImg() {
+export function GithubImg() {
     return <img
         src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
         alt={""}
