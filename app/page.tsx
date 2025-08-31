@@ -51,7 +51,7 @@ export default function Home() {
                       source: "https://github.com/pvputils/fabricpvputils-oss",
                       organization: null,
                       absoluteIframe: (
-                          <ShowcaseYoutubeIFrame source={"youtube.com"}/>
+                          <iframe className={"absolute"} src={"https://pvputils.vercel.app/fabric"}/>
                       ),
                       content: (
                           <p>

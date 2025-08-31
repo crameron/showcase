@@ -14,7 +14,6 @@
 
 >set up auto-scrolling for trigger backgrounds
 >white space above iframe so that it can be seen when selected
->accordiontrigger shouldn't underline when mousing over badges that hold links
 >regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
 
 >make accordiontrigger stop underlining when mousing over link badges
