@@ -13,7 +13,6 @@
 >fetch project line count + other data from github
 
 >set up auto-scrolling for trigger backgrounds
->white space above iframe so that it can be seen when selected
 >regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
 
 >make accordiontrigger stop underlining when mousing over link badges
