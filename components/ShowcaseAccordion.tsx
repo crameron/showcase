@@ -7,7 +7,8 @@ import {Badge} from "@/components/ui/badge";
 
 const foo = "h-[17vh]"
 export default function ShowcaseAccordion() {
-    const accordionItems = new Set<HTMLElement>()
+    const accordionIFrames = React.useRef<Map<string, HTMLElement>>(new Map());
+    const accordionTriggers = React.useRef<Set<HTMLElement>>(new Set());
     return <Accordion type="single" collapsible>
         {
             [{
@@ -82,7 +83,11 @@ export default function ShowcaseAccordion() {
                 source: null,
                 organization: "https://github.com/orgs/potpissers/repositories",
                 absoluteIframe: (
-                    <ShowcaseYoutubeIFrame source={"https://www.youtube.com/embed/XCERSWZMcac"}/>
+                    <iframe width="560" height="315" // TODO method-ize this. GL with what a piece of fucking trash react is
+                            src={`${"https://www.youtube.com/embed/XCERSWZMcac"}?autoplay=1&mute=1&loop=1&controls=0&playlist=${"https://www.youtube.com/embed/XCERSWZMcac".match(/(?:v=|\/)([0-9A-Za-z_-]{11})/)}`} // TODO ai made this
+                            allow="autoplay"
+                            className={"absolute"}
+                            allowFullScreen/>
                 ), content: (
                     <p>
                         <JavaBadge/> <PostgresQLBadge color={"bg-sky-200"}/> <GenericBadge text={"sqlite"} color={"bg-sky-200"}/> <GenericBadge text={"git patches"} color={"bg-sky-100"}/> <LinuxBadge color={"bg-sky-100"}/> <GitBadge color={"bg-sky-100"}/>
@@ -101,23 +106,29 @@ export default function ShowcaseAccordion() {
             }
             ].map((entry) => (
                 <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden w-[90vw]"}>
-                    {React.cloneElement(entry.absoluteIframe, {className: "absolute ShowcaseIFrame"})}
-                    <AccordionTrigger className={`ShowcaseAccordionTrigger relative ` + foo} style={{
+                    {React.cloneElement(entry.absoluteIframe, {className: "absolute", ref: (frame: HTMLIFrameElement | null) => {
+                        if (frame)
+                            accordionIFrames.current.set(entry.name, frame)
+                        }})}
+                    <AccordionTrigger ref={trigger => {
+                        if (trigger)
+                            accordionTriggers.current.add(trigger)}
+                    } className={`relative ` + foo} style={{
                         backdropFilter: "blur(1vw)",
                         backgroundColor: "rgba(255, 255, 255, 0.75)",
                         padding: "1vw"
                     }} onClick={e => {
                         const current = e.currentTarget
                         const flag = current.classList.contains(foo)
-                        for (const child of current.parentElement!.parentElement!.parentElement!.children) {
-                            child.querySelector('.ShowcaseAccordionTrigger')?.classList.add(foo);
-                            (child.parentElement!.querySelector('.ShowcaseIFrame')! as HTMLElement).style.marginTop = "0px"
-                        }
+                        for (const bar of accordionIFrames.current.values())
+                            bar.style.marginTop = "0px"
+                        for (const bar of accordionTriggers.current)
+                            bar.classList.add(foo)
                         // TODO share animation with accordion
                         // TODO -> this isn't handling it being closed by another one being activated. i need to iterate over all of them or something
                         if (flag) {
                             current.classList.remove(foo);
-                            (current.parentElement!.parentElement!.querySelector('.ShowcaseIFrame')! as HTMLElement).style.marginTop = `${current.offsetHeight}px`
+                            accordionIFrames.current.get(entry.name)!.style.marginTop = `${current.offsetHeight}px` // TODO ?
                             current.scrollIntoView({behavior: "smooth", block: "start"});
                         }
                     }}>
@@ -201,14 +212,6 @@ function OvhBadge() {
 
 function ModrinthBadge() {
     return <GenericLinkBadge text={"modrinth"} link={"https://modrinth.com/"}/>
-}
-
-function ShowcaseYoutubeIFrame({source}: { source: string }) {
-    return <iframe width="560" height="315"
-                   src={`${source}?autoplay=1&mute=1&loop=1&controls=0&playlist=${source.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/)}`} // TODO ai made this
-                   allow="autoplay"
-                   className={"absolute"}
-                   allowFullScreen/>
 }
 
 function GithubImg() {
