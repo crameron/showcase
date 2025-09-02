@@ -122,8 +122,9 @@ iframe {
   }
   body {
     @apply bg-background text-foreground;
+
+    /* me start */
+    @apply overflow-y-scroll
+    /* me end */
   }
 }
-/*html {*/
-/*  @apply overflow-y-scroll*/
-/*}*/

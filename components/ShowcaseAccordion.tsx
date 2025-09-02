@@ -17,7 +17,8 @@ export default function ShowcaseAccordion() {
                 source: null,
                 organization: null,
                 absoluteIframe: (
-                    <iframe className={"absolute"} src={"https://untitled-moviesite.vercel.app/"}/>
+                    <iframe className={"absolute"}
+                            src={"https://untitled-moviesite.vercel.app/"}/>
                 ),
                 content: (
                     <p>
@@ -106,7 +107,7 @@ export default function ShowcaseAccordion() {
             }
             ].map((entry) => (
                 <AccordionItem value={entry.name} key={entry.name} className={"relative overflow-y-hidden w-[90vw]"}>
-                    {React.cloneElement(entry.absoluteIframe, {className: "absolute", ref: (frame: HTMLIFrameElement | null) => {
+                    {React.cloneElement(entry.absoluteIframe, {ref: (frame: HTMLIFrameElement | null) => {
                         if (frame)
                             accordionIFrames.current.set(entry.name, frame)
                         }})}
@@ -129,7 +130,7 @@ export default function ShowcaseAccordion() {
                         if (flag) {
                             current.classList.remove(foo);
                             accordionIFrames.current.get(entry.name)!.style.marginTop = `${current.offsetHeight}px` // TODO ?
-                            current.scrollIntoView({behavior: "smooth", block: "start"});
+                            // current.scrollIntoView({behavior: "smooth", block: "start"}); TODO Fix
                         }
                     }}>
                         <div className={"h-full w-full flex justify-between"} >
@@ -139,7 +140,7 @@ export default function ShowcaseAccordion() {
                             {entry.organization && (<GenericLinkBadge link={entry.organization} text={<>organization <GithubImg/></>} color={"bg-green-100"}/>)}
                         </div>
                     </AccordionTrigger>
-                    <AccordionContent className={"h-[90vh] w-[90vw]"}/>
+                    <AccordionContent className={"w-[90vw] h-[90vh]"}/>
                 </AccordionItem>
             ))
         }

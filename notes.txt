@@ -10,11 +10,12 @@
     >show/handle closed source pvputils soft cheats
     >use current.scrollIntoView({ behavior: "smooth", block: "start" });
 
->github api to set the .readme?
 >fetch project line count + other data from github
 >set up auto-scrolling for trigger backgrounds
->regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
 
+>github api to set the .readme?
+>double scrolling is annoying, gl
+    >regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
 >make accordiontrigger stop underlining when mousing over link badges
 >the accordion trigger height change is bad
 >showcase site source code as the background?
