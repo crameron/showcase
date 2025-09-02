@@ -11,8 +11,8 @@
     >use current.scrollIntoView({ behavior: "smooth", block: "start" });
 
 >fetch project line count
->set up auto-scrolling for trigger backgrounds
 
+>set up auto-scrolling for trigger backgrounds
 >fetch other data from github?
 >github api to set the .readme?
 >double scrolling is annoying, gl
