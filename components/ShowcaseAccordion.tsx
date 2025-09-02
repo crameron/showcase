@@ -75,7 +75,7 @@ export default function ShowcaseAccordion() {
                     <p>
                         <GenericBadge text={"golang"} color={"bg-sky-200"}/> <GenericBadge text="html" color={"bg-sky-200"}/> <GenericBadge text={"css"} color={"bg-sky-200"}/> <GenericBadge text={"javascript"} color={"bg-sky-200"}/> <PostgresQLBadge color={"bg-sky-100"}/> <LinuxBadge/> <GitBadge/> <br/>
                         minecraft server network site <br/>
-                        - was hosted on <OvhBadge/>
+                        - was hosted on <OvhBadge/>, currently running on <GenericLinkBadge text={"google cloud"} link={"https://cloud.google.com/?hl=en"}/>
                     </p>
                 )
             }, {
