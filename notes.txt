@@ -1,15 +1,10 @@
->handle potpissers site being offline + online
 >movie site:
     >user profiles etc.
     >notifications
     >finish description data
->pvputils site:
-    >start at black and fade background to white?
-    >fade in effects
-    >animated favicon?
-    >show/handle closed source pvputils soft cheats
-    >use current.scrollIntoView({ behavior: "smooth", block: "start" });
->fetch project line count
+>use openhub's api
+>show/handle closed source pvputils soft cheats
+>public potpissers projects and add to openhub
 
 >set up auto-scrolling for trigger backgrounds
 >fetch other data from github?
