@@ -10,9 +10,10 @@
     >show/handle closed source pvputils soft cheats
     >use current.scrollIntoView({ behavior: "smooth", block: "start" });
 
->fetch project line count + other data from github
+>fetch project line count
 >set up auto-scrolling for trigger backgrounds
 
+>fetch other data from github?
 >github api to set the .readme?
 >double scrolling is annoying, gl
     >regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
