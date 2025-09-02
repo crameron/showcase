@@ -9,7 +9,6 @@
     >animated favicon?
     >show/handle closed source pvputils soft cheats
     >use current.scrollIntoView({ behavior: "smooth", block: "start" });
-
 >fetch project line count
 
 >set up auto-scrolling for trigger backgrounds
