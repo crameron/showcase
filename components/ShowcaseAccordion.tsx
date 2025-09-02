@@ -69,7 +69,7 @@ export default function ShowcaseAccordion() {
                 source: "https://github.com/potpissers/Potpissers-web",
                 organization: null,
                 absoluteIframe: (
-                    <iframe className={"absolute"} src={"https://www.youtube.com/"}/>
+                    <iframe className={"absolute"} src={"https://potpissers.com/"}/>
                 ),
                 content: (
                     <p>
