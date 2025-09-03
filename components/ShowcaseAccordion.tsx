@@ -117,7 +117,7 @@ export default function ShowcaseAccordion() {
                     } className={`relative ` + foo} style={{
                         backdropFilter: "blur(1vw)",
                         backgroundColor: "rgba(255, 255, 255, 0.75)",
-                        padding: "1vw"
+                        padding: "1vw",
                     }} onClick={e => {
                         const current = e.currentTarget
                         const flag = current.classList.contains(foo)
