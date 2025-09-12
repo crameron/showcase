@@ -2,7 +2,7 @@
 
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import React from "react";
-import {GenericBadge, GenericSourceBadge} from "@/app/page";
+import {GenericBadge, GenericSourceBadge} from "@/components/page";
 
 const foo = "h-[17vh]"
 export default function ShowcaseAccordion({props}: {props: {
