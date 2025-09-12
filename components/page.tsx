@@ -1,5 +1,6 @@
 import GenericLinkBadge from "@/components/GenericLinkBadge";
 import {Badge} from "@/components/ui/badge";
+import React from "react";
 
 export type genericBadgeColors = "bg-sky-100" | "bg-sky-200" | "bg-green-100" | "bg-red-200"
 
