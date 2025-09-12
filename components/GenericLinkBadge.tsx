@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import {GenericBadge, genericBadgeColors} from "@/app/page";
+import {GenericBadge, genericBadgeColors} from "@/components/page";
 
 export default function GenericLinkBadge({text, color, link}: { text: React.ReactNode; color?: genericBadgeColors; link: string }) {
     return <a
