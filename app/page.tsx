@@ -214,7 +214,7 @@ export function GenericSourceBadge({isOrganizationElseSource, github, openhubId,
     const sourceText = <>{isOrganizationElseSource ? "organization" : "source"} <GithubImg/></>
     if (github && loc)
         return <GenericBadge text={<>
-            <GenericLinkBadge text={<small>{loc} loc</small>} link={`https://openhub.net/p/${openhubId}`}/><GenericLinkBadge link={github} text={sourceText}/>
+            <GenericLinkBadge color={"bg-green-100"} link={github} text={sourceText}/> <GenericLinkBadge text={(<small>{loc} loc</small>)} link={`https://openhub.net/p/${openhubId}`}/>
         </>} color={"bg-green-100"}/>
     else
         return <GenericBadge text={sourceText} color={"bg-red-200"}/>
