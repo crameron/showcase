@@ -5,21 +5,25 @@ import React from "react";
 import {GenericBadge, GenericSourceBadge} from "@/app/page";
 
 const foo = "h-[17vh]"
-export default function ShowcaseAccordion({props}: {props: {
-        name: string;
-        isWip: boolean;
-        source: {
-            github: string;
-            loc: number;
-            openhubId: number;
-        } | null;
-        organization: {
-            github: string,
-            loc: number;
-        } | null;
-        absoluteIframe: React.ReactElement;
-        content: React.ReactNode;
-    }[]}) {
+type showcaseItem = { // TODO react is retarded for giving an error if I type this inline
+    name: string;
+    isWip: boolean;
+    source: {
+        github: string;
+        loc: number;
+        openhubId: number;
+    } | null;
+    organization: {
+        github: string;
+        loc: number;
+    } | null;
+    absoluteIframe: React.ReactElement<
+        React.IframeHTMLAttributes<HTMLIFrameElement> &
+        React.RefAttributes<HTMLIFrameElement>
+    >;
+    content: React.ReactNode;
+};
+export default function ShowcaseAccordion({props}: {props: showcaseItem[]}) {
     const accordionIFrames = React.useRef<Map<string, HTMLElement>>(new Map());
     const accordionTriggers = React.useRef<Set<HTMLElement>>(new Set());
     return <Accordion type="single" collapsible>
