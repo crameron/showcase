@@ -15,6 +15,7 @@ export default async function Home() {
     const openhubData = new Map(await Promise.all(openhubProjects.map(async project => {
         const id = project.id
         const loc = (await (await fetch(`https://www.openhub.net/p/${id}.xml?api_key=${process.env.OPENHUB_API_KEY}`)).text()).match(/<total_code_lines>(\d+)<\/total_code_lines>/)!
+
         return [project.name, {id, loc: Number(loc[1])}] as const
     })));
   return (
