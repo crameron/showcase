@@ -2,7 +2,6 @@
     >user profiles etc.
     >notifications
     >finish description data
->use openhub's api
 >show/handle closed source pvputils soft cheats
 >public potpissers projects and add to openhub
 
