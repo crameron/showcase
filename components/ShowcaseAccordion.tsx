@@ -108,7 +108,7 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                             src={`${"https://www.youtube.com/embed/XCERSWZMcac"}?autoplay=1&mute=1&loop=1&controls=0&playlist=${"https://www.youtube.com/embed/XCERSWZMcac".match(/(?:v=|\/)([0-9A-Za-z_-]{11})/)}`} // TODO ai made this
                             allow="autoplay"
                             className={"absolute"}
-                            allowFullScreen/>
+                            allowFullScreen/> // TODO -> this should be aspect-video better
                 ), content: (
                     <p>
                         <JavaBadge/> <PostgresQLBadge color={"bg-sky-200"}/> <GenericBadge text={"sqlite"} color={"bg-sky-200"}/> <GenericBadge text={"git patches"} color={"bg-sky-100"}/> <LinuxBadge color={"bg-sky-100"}/> <GitBadge color={"bg-sky-100"}/>
