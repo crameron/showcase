@@ -13,6 +13,9 @@ export default async function Home() {
               {name: "potpissers-web", id: 766260},
               {name: "potpissers-velocity", id: 766261},
               {name: "potpissers-postgres", id: 766262},
+              {name: "potpissers-cubecore", id: 766263},
+              {name: "potpissers-kollusion", id: 766264},
+              {name: "potpissers-upstream", id: 766265},
           ].map(async project => {
               const id = project.id
               const loc = (await (await fetch(`https://www.openhub.net/p/${id}.xml?api_key=${process.env.OPENHUB_API_KEY}`)).text()).match(/<total_code_lines>(\d+)<\/total_code_lines>/)!

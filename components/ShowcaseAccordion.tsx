@@ -115,10 +115,10 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                         <br/>
                         minecraft server network <br/>
                         - first project. comprised of: <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. these plugins share an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"}/> <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-cubecore"}/>) <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-kollusion"}/>) <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. these plugins share an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"} openhubId={props.get("potpissers-upstream")?.id} loc={props.get("potpissers-upstream")?.id}/> <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-cubecore"} openhubId={props.get("potpissers-cubecore")?.id} loc={props.get("potpissers-cubecore")?.loc}/>) <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-kollusion"} openhubId={props.get("potpissers-kollusion")?.id} loc={props.get("potpissers-kollusion")?.loc}/>) <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur"} openhubId={props.get("potpissers-purpur")?.id}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-velocity"} openhubId={props.get("potpissers-velocity")?.id} loc={props.get("potpissers-velocity")?.loc}/>) for paper&#39;s <GenericLinkBadge text={"velocity"} link={"https://papermc.io/software/velocity"}/> server proxy <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-postgres"} openhubId={props.get("potpissers-postgres")?.id} loc={props.get("potpissers-postgres")?.loc}/>)<br/>
                         - was all hosted on <OvhBadge/><br/>
