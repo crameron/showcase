@@ -10,7 +10,6 @@ REPOS=(
 "https://github.com/potpissers/Potpissers-cubecore.git"
 "https://github.com/potpissers/Potpissers-postgres.git"
 "https://github.com/potpissers/Potpissers-velocity.git"
-"https://github.com/potpissers/Potpissers-purpur.git"
 )
 
 TMP_DIR="temp_projects"

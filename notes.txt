@@ -1,7 +1,8 @@
 >get the correct loc for purpur
 >show all loc data
 >show loc data for private projects
->make github alt
+>make github alt + public the cheat client + public the showcase site etc.
+>fix potpissers.com center scrolling
 
 >movie site:
     >user profiles etc.
@@ -10,6 +11,7 @@
 >show/handle closed source pvputils soft cheats
 >public potpissers projects and add to openhub
 
+>bloom in like closing ctrl+shift+i
 >set up auto-scrolling for trigger backgrounds
 >fetch other data from github?
 >github api to set the .readme?
