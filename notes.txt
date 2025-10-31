@@ -1,7 +1,6 @@
 >get the correct loc for purpur
 >show all loc data
 >show loc data for private projects
->make github alt + public the cheat client + public the showcase site etc.
 >fix potpissers.com center scrolling
 
 >movie site:
