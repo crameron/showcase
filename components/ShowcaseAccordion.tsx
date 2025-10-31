@@ -14,8 +14,9 @@ export default function ShowcaseAccordion() {
         {
             [{
                 name: "untitled-moviesite",
-                isWip: true,
-                source: null,
+                source: {
+                    loc: LOC["Untitled-moviesite"]["Vuejs Component"].code,
+                },
                 organization: null,
                 absoluteIframe: (
                     <iframe className={"absolute"}
@@ -24,14 +25,13 @@ export default function ShowcaseAccordion() {
                 content: (
                     <p>
                         <GenericBadge text={"vue"} color={"bg-sky-200"}/> <GenericBadge text={"nuxt"} color={"bg-sky-200"}/> <PostgresQLBadge color={"bg-sky-100"}/> <TailwindBadge/> <ShadcnBadge/> <JsonBadge color={"bg-sky-100"}/> <GitBadge/> <br/>
-                        movie data aggregator site <br/>
+                        movie data aggregator site <a><GenericBadge text={"wip"} color={"bg-red-200"}/></a> <br/>
                         - wraps <GenericLinkBadge text={"omdb"} link={"https://www.omdbapi.com/"}/>, <GenericLinkBadge text={"tmdb"} link={"https://developer.themoviedb.org/docs/getting-started"}/>, and <GenericLinkBadge
                         text={"wikidata"} link={"https://www.wikidata.org/wiki/Wikidata:Main_Page"}/>&#39;s respective apis. hosted using <VercelSupabaseBadge/><br/>
                     </p>
                 )
             }, {
                 name: "pvp-utils-site",
-                isWip: false,
                 source: {
                     github: "https://github.com/memeasaur/pvputils-web",
                     loc: LOC["pvputils-web"].TypeScript.code,
@@ -54,7 +54,6 @@ export default function ShowcaseAccordion() {
                 )
             }, {
                 name: "fabric-pvp-utils",
-                isWip: false,
                 source: {
                     github: "https://github.com/pvputils/fabricpvputils-oss",
                     loc: LOC["fabricpvputils-oss"].Java.code,
@@ -73,7 +72,6 @@ export default function ShowcaseAccordion() {
                 )
             }, {
                 name: "potpissers-web",
-                isWip: false,
                 source: {
                     github: "https://github.com/potpissers/Potpissers-web",
                     loc: LOC["Potpissers-web"].Go.code + LOC["Potpissers-web"].JavaScript.code + LOC["Potpissers-web"].CSS.code, // TODO
@@ -91,7 +89,6 @@ export default function ShowcaseAccordion() {
                 )
             }, {
                 name: "potpissers",
-                isWip: false,
                 source: null,
                 organization: {
                     github: "https://github.com/orgs/potpissers/repositories",
@@ -123,7 +120,7 @@ export default function ShowcaseAccordion() {
                         &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. each sharing an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"} loc={LOC["Potpissers-upstream"].Java.code}/> <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hcf (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-cubecore"} loc={LOC["Potpissers-cubecore"].Java.code}/>) <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-kollusion"} loc={LOC["Potpissers-kollusion"].Java.code}/>) <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur/commit/ad7ba51c21bf52e61d4d75866f9c81a28cdfe75f"}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-velocity"} loc={LOC["Potpissers-velocity"].Java.code}/>) for paper&#39;s <GenericLinkBadge text={"velocity"} link={"https://papermc.io/software/velocity"}/> server proxy <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-postgres"} loc={LOC["Potpissers-postgres"].SQL.code}/>)<br/>
                         - was all hosted on <OvhBadge/><br/>
@@ -164,7 +161,6 @@ export default function ShowcaseAccordion() {
                     }}>
                         <div className={"h-full w-full flex justify-between items-start"} >
                             {entry.content}
-                            {entry.isWip && (<a><GenericBadge text={"wip"} color={"bg-red-200"}/></a>)} {/*TODO div*/}
                             {source && (<GenericSourceBadge github={source.github} loc={source.loc}/>)}
                             {organization && (<GenericSourceBadge isOrganizationElseSource={true} github={organization.github} loc={organization.loc}/>)}
                         </div>

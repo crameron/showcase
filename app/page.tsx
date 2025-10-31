@@ -1,6 +1,7 @@
 import React from "react";
 import ShowcaseAccordion from "@/components/ShowcaseAccordion";
 import {GenericSourceBadge} from "@/components/page";
+import LOC from "../public/loc.json"
 
 export const revalidate = 259200; // 72 * 60 * 60;
 export default async function Home() {
@@ -18,7 +19,7 @@ export default async function Home() {
         {/*>*/}
         {/*  Learn*/}
         {/*</a>*/}
-          <GenericSourceBadge github={"https://github.com/memeasaur/showcase"}/> {/*TODO -> this shouldn't be here if the project is private*/}
+          <GenericSourceBadge github={"https://github.com/crameron/showcase"} loc={LOC["showcase"].TypeScript.code}/>
       </footer>
     </div>
   );

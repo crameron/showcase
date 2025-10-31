@@ -1,15 +1,14 @@
->get the correct loc for purpur
->show all loc data
->show loc data for private projects
 >fix potpissers.com center scrolling
+>add softcheats stuff
 
 >movie site:
     >user profiles etc.
     >notifications
     >finish description data
->show/handle closed source pvputils soft cheats
->public potpissers projects and add to openhub
 
+>get the correct loc for purpur
+>loc.sh: track last updated timestamp
+>show all loc data
 >bloom in like closing ctrl+shift+i
 >set up auto-scrolling for trigger backgrounds
 >fetch other data from github?
