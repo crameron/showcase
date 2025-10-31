@@ -4,12 +4,10 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/co
 import React from "react";
 import {GenericBadge, genericBadgeColors, GenericSourceBadge} from "@/components/page";
 import GenericLinkBadge from "@/components/GenericLinkBadge";
+import LOC from "../public/loc.json" // TODO ?
 
 const foo = "h-[17vh]"
-export default function ShowcaseAccordion({props}: {props: Map<string, {
-        id: number;
-        loc: number;
-    }>;}) {
+export default function ShowcaseAccordion() {
     const accordionIFrames = React.useRef<Map<string, HTMLElement>>(new Map());
     const accordionTriggers = React.useRef<Set<HTMLElement>>(new Set());
     return <Accordion type="single" collapsible>
@@ -36,8 +34,8 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                 isWip: false,
                 source: {
                     github: "https://github.com/memeasaur/pvputils-web",
-                    loc: props.get("pvp-utils-site")!.loc,
-                    openhubId: props.get("pvp-utils-site")!.id,
+                    loc: LOC["pvputils-web"].TypeScript.code,
+                    // TODO -> use other loc data
                 },
                 organization: null,
                 absoluteIframe: (
@@ -59,8 +57,7 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                 isWip: false,
                 source: {
                     github: "https://github.com/pvputils/fabricpvputils-oss",
-                    loc: props.get("fabric-pvp-utils")!.loc,
-                    openhubId: props.get("fabric-pvp-utils")!.id,
+                    loc: LOC["fabricpvputils-oss"].Java.code,
                 },
                 organization: null,
                 absoluteIframe: (
@@ -79,8 +76,7 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                 isWip: false,
                 source: {
                     github: "https://github.com/potpissers/Potpissers-web",
-                    loc: props.get("potpissers-web")!.loc,
-                    openhubId: props.get("potpissers-web")!.id,
+                    loc: LOC["Potpissers-web"].Go.code + LOC["Potpissers-web"].JavaScript.code + LOC["Potpissers-web"].CSS.code, // TODO
                 },
                 organization: null,
                 absoluteIframe: (
@@ -99,9 +95,18 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                 source: null,
                 organization: {
                     github: "https://github.com/orgs/potpissers/repositories",
-                    loc: props.entries()
-                        .filter(([name, ]) => name !== "potpissers-web" && name.includes("potpissers"))
-                        .reduce((sum, [, value]) => sum + value.loc, 0),
+                    loc: (() => {
+                        const upstreamLines = LOC["Potpissers-upstream"].Java.code
+                        return upstreamLines +
+                            (LOC["Potpissers-cubecore"].Java.code - upstreamLines) +
+                            (LOC["Potpissers-kollusion"].Java.code - upstreamLines) +
+                            // LOC["Potpissers-purpur"].Java.code + // TODO -> handle purpur lines
+                            LOC["Potpissers-velocity"].Java.code +
+                            LOC["Potpissers-postgres"].SQL.code // TODO -> handle languages?
+                    })(),
+                    // Object.entries(LOC)
+                    //                         .filter(([name, ]) => name !== "Potpissers-web" && name.includes("Potpissers"))
+                    //                         .reduce((sum, [, value]) => sum + value., 0)
                 },
                 absoluteIframe: (
                     <iframe width="560" height="315" // TODO method-ize this. GL with what a piece of fucking trash react is
@@ -115,12 +120,12 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                         <br/>
                         minecraft server network <br/>
                         - first project. comprised of: <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. these plugins share an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"} openhubId={props.get("potpissers-upstream")?.id} loc={props.get("potpissers-upstream")?.id}/> <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hardcore factions (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-cubecore"} openhubId={props.get("potpissers-cubecore")?.id} loc={props.get("potpissers-cubecore")?.loc}/>) <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-kollusion"} openhubId={props.get("potpissers-kollusion")?.id} loc={props.get("potpissers-kollusion")?.loc}/>) <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur"} openhubId={props.get("potpissers-purpur")?.id}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-velocity"} openhubId={props.get("potpissers-velocity")?.id} loc={props.get("potpissers-velocity")?.loc}/>) for paper&#39;s <GenericLinkBadge text={"velocity"} link={"https://papermc.io/software/velocity"}/> server proxy <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-postgres"} openhubId={props.get("potpissers-postgres")?.id} loc={props.get("potpissers-postgres")?.loc}/>)<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. each sharing an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"} loc={LOC["Potpissers-upstream"].Java.code}/> <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hcf (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-cubecore"} loc={LOC["Potpissers-cubecore"].Java.code}/>) <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-kollusion"} loc={LOC["Potpissers-kollusion"].Java.code}/>) <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - custom server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur"}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-velocity"} loc={LOC["Potpissers-velocity"].Java.code}/>) for paper&#39;s <GenericLinkBadge text={"velocity"} link={"https://papermc.io/software/velocity"}/> server proxy <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-postgres"} loc={LOC["Potpissers-postgres"].SQL.code}/>)<br/>
                         - was all hosted on <OvhBadge/><br/>
                     </p>
                 )
@@ -160,7 +165,7 @@ export default function ShowcaseAccordion({props}: {props: Map<string, {
                         <div className={"h-full w-full flex justify-between items-start"} >
                             {entry.content}
                             {entry.isWip && (<a><GenericBadge text={"wip"} color={"bg-red-200"}/></a>)} {/*TODO div*/}
-                            {source && (<GenericSourceBadge github={source.github} openhubId={source.openhubId} loc={source.loc}/>)}
+                            {source && (<GenericSourceBadge github={source.github} loc={source.loc}/>)}
                             {organization && (<GenericSourceBadge isOrganizationElseSource={true} github={organization.github} loc={organization.loc}/>)}
                         </div>
                     </AccordionTrigger>

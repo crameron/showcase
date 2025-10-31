@@ -13,15 +13,12 @@ export function GenericBadge({text, color, isHoverUnderline}: {
                   className={(color ? color : "") + (isHoverUnderline ? " hover:underline " : "")}>{text}</Badge>
 }
 
-export function GenericSourceBadge({isOrganizationElseSource, github, openhubId, loc}: { isOrganizationElseSource?: boolean; github: string | null; openhubId?: number; loc?: number}) {
-    // const foo =
+export function GenericSourceBadge({isOrganizationElseSource, github, loc}: { isOrganizationElseSource?: boolean; github: string | null; openhubId?: number; loc?: number}) {
     const sourceText = <>{isOrganizationElseSource ? "organization" : "source"} <GithubImg/></>
     if (github && loc) {
-        const locText = (<small>({loc} loc)</small>)
+        const locText = (<small>(~{loc} loc)</small>)
         return <GenericBadge text={<>
-            <GenericLinkBadge color={"bg-green-100"} link={github} text={sourceText}/> {openhubId
-            ? <GenericLinkBadge text={locText} link={`https://openhub.net/p/${openhubId}`}/>
-            : <GenericBadge text={locText}/>}
+            <GenericLinkBadge color={"bg-green-100"} link={github} text={sourceText}/> <GenericBadge text={locText}/>
         </>} color={"bg-green-100"}/>
     }
     else

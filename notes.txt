@@ -1,3 +1,8 @@
+>get the correct loc for purpur
+>show all loc data
+>show loc data for private projects
+>make github alt
+
 >movie site:
     >user profiles etc.
     >notifications

@@ -7,21 +7,7 @@ export default async function Home() {
   return (
     <div className="grid grid-rows-[1fr_auto_1fr] min-h-screen place-items-center"> {/*TODO p-8 pb-20 gap-16 sm:p-20*/}
       <main className="flex flex-col row-start-2 items-center sm:items-start"> {/*TODO gap-[32px]*/}
-          <ShowcaseAccordion props={new Map(await Promise.all([
-              {name: "pvp-utils-site", id: 766258},
-              {name: "fabric-pvp-utils", id: 766259},
-              {name: "potpissers-web", id: 766260},
-              {name: "potpissers-velocity", id: 766261},
-              {name: "potpissers-postgres", id: 766262},
-              {name: "potpissers-cubecore", id: 766263},
-              {name: "potpissers-kollusion", id: 766264},
-              {name: "potpissers-upstream", id: 766265},
-          ].map(async project => {
-              const id = project.id
-              const loc = (await (await fetch(`https://www.openhub.net/p/${id}.xml?api_key=${process.env.OPENHUB_API_KEY}`)).text()).match(/<total_code_lines>(\d+)<\/total_code_lines>/)!
-
-              return [project.name, {id, loc: Number(loc[1])}] as const
-          })))}/>
+          <ShowcaseAccordion/>
       </main>
       <footer className="justify-self-end row-start-3">
         {/*<a*/}

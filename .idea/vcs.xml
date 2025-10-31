@@ -2,5 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/Potpissers-cubecore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/Potpissers-kollusion" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/Potpissers-postgres" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/Potpissers-purpur" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/Potpissers-upstream" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/Potpissers-velocity" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/Potpissers-web" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/fabricpvputils-oss" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_projects/pvputils-web" vcs="Git" />
   </component>
 </project>

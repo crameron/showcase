@@ -1,0 +1,545 @@
+{
+  "fabricpvputils-oss": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.0228018760681152,
+      "n_files": 32,
+      "n_lines": 2293,
+      "files_per_second": 1403.39329555198,
+      "lines_per_second": 100561.900834396
+    },
+    "Java": {
+      "nFiles": 23,
+      "blank": 129,
+      "comment": 46,
+      "code": 1545
+    },
+    "Bourne Shell": {
+      "nFiles": 1,
+      "blank": 28,
+      "comment": 118,
+      "code": 105
+    },
+    "Gradle": {
+      "nFiles": 2,
+      "blank": 17,
+      "comment": 14,
+      "code": 78
+    },
+    "DOS Batch": {
+      "nFiles": 1,
+      "blank": 21,
+      "comment": 2,
+      "code": 71
+    },
+    "JSON": {
+      "nFiles": 2,
+      "blank": 1,
+      "comment": 0,
+      "code": 61
+    },
+    "YAML": {
+      "nFiles": 1,
+      "blank": 2,
+      "comment": 4,
+      "code": 24
+    },
+    "Properties": {
+      "nFiles": 2,
+      "blank": 4,
+      "comment": 5,
+      "code": 18
+    },
+    "SUM": {
+      "blank": 202,
+      "comment": 189,
+      "code": 1902,
+      "nFiles": 32
+    }
+  },
+  "Potpissers-cubecore": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.164386987686157,
+      "n_files": 156,
+      "n_lines": 17644,
+      "files_per_second": 948.980221584391,
+      "lines_per_second": 107332.096343814
+    },
+    "Java": {
+      "nFiles": 119,
+      "blank": 1214,
+      "comment": 1017,
+      "code": 13689
+    },
+    "YAML": {
+      "nFiles": 2,
+      "blank": 22,
+      "comment": 128,
+      "code": 463
+    },
+    "Properties": {
+      "nFiles": 5,
+      "blank": 0,
+      "comment": 10,
+      "code": 315
+    },
+    "Text": {
+      "nFiles": 8,
+      "blank": 8,
+      "comment": 0,
+      "code": 268
+    },
+    "XML": {
+      "nFiles": 10,
+      "blank": 0,
+      "comment": 0,
+      "code": 247
+    },
+    "Maven": {
+      "nFiles": 1,
+      "blank": 6,
+      "comment": 0,
+      "code": 81
+    },
+    "Bourne Shell": {
+      "nFiles": 10,
+      "blank": 28,
+      "comment": 2,
+      "code": 73
+    },
+    "SQL": {
+      "nFiles": 1,
+      "blank": 3,
+      "comment": 6,
+      "code": 64
+    },
+    "SUM": {
+      "blank": 1281,
+      "comment": 1163,
+      "code": 15200,
+      "nFiles": 156
+    }
+  },
+  "Potpissers-kollusion": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.131519079208374,
+      "n_files": 132,
+      "n_lines": 13601,
+      "files_per_second": 1003.65666179022,
+      "lines_per_second": 103414.653462188
+    },
+    "Java": {
+      "nFiles": 95,
+      "blank": 969,
+      "comment": 639,
+      "code": 10345
+    },
+    "YAML": {
+      "nFiles": 2,
+      "blank": 21,
+      "comment": 128,
+      "code": 394
+    },
+    "Properties": {
+      "nFiles": 5,
+      "blank": 1,
+      "comment": 10,
+      "code": 315
+    },
+    "Text": {
+      "nFiles": 8,
+      "blank": 8,
+      "comment": 0,
+      "code": 268
+    },
+    "XML": {
+      "nFiles": 10,
+      "blank": 0,
+      "comment": 0,
+      "code": 240
+    },
+    "Maven": {
+      "nFiles": 1,
+      "blank": 6,
+      "comment": 0,
+      "code": 81
+    },
+    "Bourne Shell": {
+      "nFiles": 10,
+      "blank": 28,
+      "comment": 2,
+      "code": 73
+    },
+    "SQL": {
+      "nFiles": 1,
+      "blank": 3,
+      "comment": 6,
+      "code": 64
+    },
+    "SUM": {
+      "blank": 1036,
+      "comment": 785,
+      "code": 11780,
+      "nFiles": 132
+    }
+  },
+  "Potpissers-postgres": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.0106241703033447,
+      "n_files": 6,
+      "n_lines": 4102,
+      "files_per_second": 564.749983169139,
+      "lines_per_second": 386100.738493301
+    },
+    "SQL": {
+      "nFiles": 3,
+      "blank": 92,
+      "comment": 14,
+      "code": 3451
+    },
+    "XML": {
+      "nFiles": 2,
+      "blank": 0,
+      "comment": 0,
+      "code": 533
+    },
+    "Bourne Shell": {
+      "nFiles": 1,
+      "blank": 3,
+      "comment": 0,
+      "code": 9
+    },
+    "SUM": {
+      "blank": 95,
+      "comment": 14,
+      "code": 3993,
+      "nFiles": 6
+    }
+  },
+  "Potpissers-purpur": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.140134811401367,
+      "n_files": 400,
+      "n_lines": 54015,
+      "files_per_second": 2854.39425079283,
+      "lines_per_second": 385450.263641437
+    },
+    "diff": {
+      "nFiles": 370,
+      "blank": 3341,
+      "comment": 18280,
+      "code": 30568
+    },
+    "Markdown": {
+      "nFiles": 2,
+      "blank": 155,
+      "comment": 4,
+      "code": 478
+    },
+    "YAML": {
+      "nFiles": 7,
+      "blank": 8,
+      "comment": 2,
+      "code": 263
+    },
+    "Bourne Shell": {
+      "nFiles": 3,
+      "blank": 49,
+      "comment": 125,
+      "code": 228
+    },
+    "Gradle": {
+      "nFiles": 3,
+      "blank": 31,
+      "comment": 2,
+      "code": 167
+    },
+    "XML": {
+      "nFiles": 7,
+      "blank": 0,
+      "comment": 0,
+      "code": 138
+    },
+    "DOS Batch": {
+      "nFiles": 1,
+      "blank": 21,
+      "comment": 2,
+      "code": 69
+    },
+    "INI": {
+      "nFiles": 1,
+      "blank": 7,
+      "comment": 0,
+      "code": 30
+    },
+    "Java": {
+      "nFiles": 3,
+      "blank": 5,
+      "comment": 0,
+      "code": 15
+    },
+    "Properties": {
+      "nFiles": 2,
+      "blank": 2,
+      "comment": 0,
+      "code": 15
+    },
+    "Text": {
+      "nFiles": 1,
+      "blank": 0,
+      "comment": 0,
+      "code": 10
+    },
+    "SUM": {
+      "blank": 3619,
+      "comment": 18415,
+      "code": 31981,
+      "nFiles": 400
+    }
+  },
+  "Potpissers-upstream": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.100237846374512,
+      "n_files": 127,
+      "n_lines": 11345,
+      "files_per_second": 1266.98651850019,
+      "lines_per_second": 113180.803562084
+    },
+    "Java": {
+      "nFiles": 90,
+      "blank": 801,
+      "comment": 444,
+      "code": 8480
+    },
+    "YAML": {
+      "nFiles": 2,
+      "blank": 19,
+      "comment": 128,
+      "code": 368
+    },
+    "Properties": {
+      "nFiles": 5,
+      "blank": 1,
+      "comment": 10,
+      "code": 315
+    },
+    "Text": {
+      "nFiles": 8,
+      "blank": 8,
+      "comment": 0,
+      "code": 268
+    },
+    "XML": {
+      "nFiles": 10,
+      "blank": 0,
+      "comment": 0,
+      "code": 240
+    },
+    "Maven": {
+      "nFiles": 1,
+      "blank": 6,
+      "comment": 0,
+      "code": 81
+    },
+    "Bourne Shell": {
+      "nFiles": 10,
+      "blank": 28,
+      "comment": 2,
+      "code": 73
+    },
+    "SQL": {
+      "nFiles": 1,
+      "blank": 3,
+      "comment": 6,
+      "code": 64
+    },
+    "SUM": {
+      "blank": 866,
+      "comment": 590,
+      "code": 9889,
+      "nFiles": 127
+    }
+  },
+  "Potpissers-velocity": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.00762200355529785,
+      "n_files": 14,
+      "n_lines": 741,
+      "files_per_second": 1836.78738778191,
+      "lines_per_second": 97218.5324533142
+    },
+    "XML": {
+      "nFiles": 8,
+      "blank": 0,
+      "comment": 0,
+      "code": 269
+    },
+    "Java": {
+      "nFiles": 3,
+      "blank": 20,
+      "comment": 42,
+      "code": 213
+    },
+    "Maven": {
+      "nFiles": 1,
+      "blank": 8,
+      "comment": 0,
+      "code": 185
+    },
+    "Properties": {
+      "nFiles": 1,
+      "blank": 0,
+      "comment": 0,
+      "code": 3
+    },
+    "JSON": {
+      "nFiles": 1,
+      "blank": 0,
+      "comment": 0,
+      "code": 1
+    },
+    "SUM": {
+      "blank": 28,
+      "comment": 42,
+      "code": 671,
+      "nFiles": 14
+    }
+  },
+  "Potpissers-web": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.0100939273834229,
+      "n_files": 32,
+      "n_lines": 2748,
+      "files_per_second": 3170.22292557338,
+      "lines_per_second": 272242.893733614
+    },
+    "Go": {
+      "nFiles": 19,
+      "blank": 191,
+      "comment": 50,
+      "code": 1862
+    },
+    "JavaScript": {
+      "nFiles": 3,
+      "blank": 29,
+      "comment": 5,
+      "code": 335
+    },
+    "CSS": {
+      "nFiles": 1,
+      "blank": 32,
+      "comment": 0,
+      "code": 142
+    },
+    "Text": {
+      "nFiles": 3,
+      "blank": 8,
+      "comment": 0,
+      "code": 42
+    },
+    "XML": {
+      "nFiles": 4,
+      "blank": 0,
+      "comment": 0,
+      "code": 40
+    },
+    "Bourne Shell": {
+      "nFiles": 1,
+      "blank": 1,
+      "comment": 0,
+      "code": 8
+    },
+    "JSON": {
+      "nFiles": 1,
+      "blank": 0,
+      "comment": 0,
+      "code": 3
+    },
+    "SUM": {
+      "blank": 261,
+      "comment": 55,
+      "code": 2432,
+      "nFiles": 32
+    }
+  },
+  "pvputils-web": {
+    "header": {
+      "cloc_url": "github.com/AlDanial/cloc",
+      "cloc_version": "2.06",
+      "elapsed_seconds": 0.0182859897613525,
+      "n_files": 28,
+      "n_lines": 9647,
+      "files_per_second": 1531.22693195301,
+      "lines_per_second": 527562.364733953
+    },
+    "JSON": {
+      "nFiles": 4,
+      "blank": 0,
+      "comment": 0,
+      "code": 7786
+    },
+    "TypeScript": {
+      "nFiles": 11,
+      "blank": 95,
+      "comment": 63,
+      "code": 1434
+    },
+    "CSS": {
+      "nFiles": 1,
+      "blank": 6,
+      "comment": 0,
+      "code": 130
+    },
+    "Markdown": {
+      "nFiles": 2,
+      "blank": 16,
+      "comment": 0,
+      "code": 42
+    },
+    "XML": {
+      "nFiles": 4,
+      "blank": 0,
+      "comment": 0,
+      "code": 32
+    },
+    "Text": {
+      "nFiles": 1,
+      "blank": 2,
+      "comment": 0,
+      "code": 17
+    },
+    "JavaScript": {
+      "nFiles": 2,
+      "blank": 5,
+      "comment": 0,
+      "code": 16
+    },
+    "SVG": {
+      "nFiles": 3,
+      "blank": 0,
+      "comment": 0,
+      "code": 3
+    },
+    "SUM": {
+      "blank": 124,
+      "comment": 63,
+      "code": 9460,
+      "nFiles": 28
+    }
+  }
+}
