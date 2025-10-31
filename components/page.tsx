@@ -17,10 +17,8 @@ export function GenericSourceBadge({isOrganizationElseSource, github, loc}: { is
     const sourceText = <>{isOrganizationElseSource ? "organization" : "source"} <GithubImg/></>
     // TODO -> handle purpur and handle loc w/o github (untitled-moviesite)
     return <GenericBadge text={<>
-        {github
-            ? (<GenericLinkBadge color={"bg-green-100"} link={github} text={sourceText}/>)
-            : <GenericBadge text={sourceText} color={"bg-red-200"}/>
-        } {loc && <GenericBadge text={(<small>(~{loc} loc)</small>)}/>}
+        {github && (<GenericLinkBadge color={"bg-green-100"} link={github} text={sourceText}/>)}
+        {loc && <GenericBadge text={(<small>(~{loc} loc)</small>)}/>}
     </>} color={github ? "bg-green-100" : "bg-red-200"}/>
 }
 
