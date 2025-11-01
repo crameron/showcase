@@ -1,5 +1,6 @@
 >fix potpissers.com center scrolling
 >add softcheats stuff
+>make loc badge clickable as source link
 
 >movie site:
     >user profiles etc.

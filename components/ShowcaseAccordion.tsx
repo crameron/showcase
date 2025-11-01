@@ -117,7 +117,7 @@ export default function ShowcaseAccordion() {
                         <br/>
                         minecraft server network <br/>
                         - first project. comprised of: <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. each sharing an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"} loc={LOC["Potpissers-upstream"].Java.code}/> <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. each extending an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"} loc={LOC["Potpissers-upstream"].Java.code}/> <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hcf (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-cubecore"} loc={LOC["Potpissers-cubecore"].Java.code}/>) <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-kollusion"} loc={LOC["Potpissers-kollusion"].Java.code}/>) <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur/commit/ad7ba51c21bf52e61d4d75866f9c81a28cdfe75f"}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
