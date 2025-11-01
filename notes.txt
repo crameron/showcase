@@ -1,22 +1,20 @@
 >fix potpissers.com center scrolling
->add softcheats stuff
->make loc badge clickable as source link
 
 >movie site:
     >user profiles etc.
     >notifications
     >finish description data
 
->get the correct loc for purpur
+>make accordiontrigger stop underlining when mousing over link badges
 >loc.sh: track last updated timestamp
 >show all loc data
+
 >bloom in like closing ctrl+shift+i
 >set up auto-scrolling for trigger backgrounds
 >fetch other data from github?
 >github api to set the .readme?
 >double scrolling is annoying, gl
     >regular pages scroll is disabled when accordion is open, but only if the iframe has a scroll
->make accordiontrigger stop underlining when mousing over link badges
 >the accordion trigger height change is bad
 >showcase site source code as the background?
 >entire site background changing based on current center project

@@ -33,14 +33,12 @@ for DIR in */; do
   mv ../loc.tmp.json ../public/loc.json
 done
 
-#git clone "https://github.com/potpissers/Potpissers-purpur.git"
-#cd Potpissers-purpur || exit
-#COMMIT_HASH=$(git log --all --grep="CamwenPurpur" --format="%H" -n 1)
-#git checkout "$COMMIT_HASH"
-#cd ..
-#cloc "Potpissers-purpur" --json | jq --arg key "Purpur" '. as $data | {($key): $data}' \
-#  | jq -s '.[0] * .[1]' ../public/loc.json - > ../loc.tmp.json
-#mv ../loc.tmp.json ../public/loc.json
+KEY="Potpissers-purpur"
+JSON=$(curl -s -H "Accept: application/vnd.github+json" \
+    "https://api.github.com/repos/potpissers/Potpissers-purpur/commits/ad7ba51c21bf52e61d4d75866f9c81a28cdfe75f")
+STATS=$(echo "$JSON" | jq  '.stats')
+jq --arg key "$KEY" --argjson data "$STATS" '. + {($key): $data}' ../public/loc.json > ../public/loc.tmp.json
+mv ../public/loc.tmp.json ../public/loc.json
 
 cd ..
 rm -rf $TMP_DIR

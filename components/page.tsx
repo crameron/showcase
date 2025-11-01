@@ -13,13 +13,20 @@ export function GenericBadge({text, color, isHoverUnderline}: {
                   className={(color ? color : "") + (isHoverUnderline ? " hover:underline " : "")}>{text}</Badge>
 }
 
-export function GenericSourceBadge({isOrganizationElseSource, github, loc}: { isOrganizationElseSource?: boolean; github?: string; loc?: number}) {
+export function GenericSourceBadge({isOrganizationElseSource, github, loc}: {
+    isOrganizationElseSource?: boolean;
+    github?: string;
+    loc: number
+}) {
     const sourceText = <>{isOrganizationElseSource ? "organization" : "source"} <GithubImg/></>
-    // TODO -> handle purpur and handle loc w/o github (untitled-moviesite)
-    return <GenericBadge text={<>
-        {github && (<GenericLinkBadge color={"bg-green-100"} link={github} text={sourceText}/>)}
-        {loc && <GenericBadge text={(<small>(~{loc} loc)</small>)}/>}
-    </>} color={github ? "bg-green-100" : "bg-red-200"}/>
+    const locText = (<GenericBadge text={<small>(~{loc} loc)</small>}/>)
+    if (github)
+        return <GenericLinkBadge text={<>
+            {github && (<GenericBadge color={"bg-green-100"} text={sourceText}/>)}
+            {<GenericBadge text={locText}/>}
+        </>} color={"bg-green-100"} link={github}/>
+    else
+        return <GenericBadge text={locText} color={"bg-red-200"}/>
 }
 
 export function GithubImg() {

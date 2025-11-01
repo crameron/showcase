@@ -55,8 +55,8 @@ export default function ShowcaseAccordion() {
             }, {
                 name: "fabric-pvp-utils",
                 source: {
-                    github: "https://github.com/pvputils/fabricpvputils-oss",
-                    loc: LOC["fabricpvputils-oss"].Java.code,
+                    github: "https://github.com/crameron/fabricpvputils-softcheats",
+                    loc: LOC["fabricpvputils-softcheats"].Java.code,
                 },
                 organization: null,
                 absoluteIframe: (
@@ -65,7 +65,7 @@ export default function ShowcaseAccordion() {
                 content: (
                     <p>
                         <JavaBadge/> <GenericBadge text={"mixin"} color={"bg-sky-200"}/> <GitBadge color={"bg-sky-100"}/> <br/>
-                        minecraft utility mod <br/>
+                        minecraft utility mod. fair play <GenericSourceBadge github={"https://github.com/pvputils/fabricpvputils-oss"} loc={LOC["fabricpvputils-oss"].Java.code}/> and unfair play <GenericSourceBadge github={"https://github.com/crameron/fabricpvputils-softcheats"} loc={LOC["fabricpvputils-softcheats"].Java.code}/> <br/>
                         - uses <GenericLinkBadge text={"fabric"} link={"https://fabricmc.net/"}/>&#39;s mod framework to implement a variety of
                         pvp-related features. hosted on <ModrinthBadge/><br/>
                     </p>
@@ -97,7 +97,7 @@ export default function ShowcaseAccordion() {
                         return upstreamLines +
                             (LOC["Potpissers-cubecore"].Java.code - upstreamLines) +
                             (LOC["Potpissers-kollusion"].Java.code - upstreamLines) +
-                            // LOC["Potpissers-purpur"].Java.code + // TODO -> handle purpur lines
+                            LOC["Potpissers-purpur"].total +
                             LOC["Potpissers-velocity"].Java.code +
                             LOC["Potpissers-postgres"].SQL.code // TODO -> handle languages?
                     })(),
@@ -120,7 +120,7 @@ export default function ShowcaseAccordion() {
                         &nbsp;&nbsp;&nbsp;&nbsp; - plugins made using <GenericLinkBadge text={"paper"} link={"https://papermc.io/"}/>&#39;s framework. each extending an upstream <GenericSourceBadge github={"https://github.com/potpissers/Potpissers-upstream"} loc={LOC["Potpissers-upstream"].Java.code}/> <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} hcf (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-cubecore"} loc={LOC["Potpissers-cubecore"].Java.code}/>) <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" >"} dayZ (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-kollusion"} loc={LOC["Potpissers-kollusion"].Java.code}/>) <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; - server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur/commit/ad7ba51c21bf52e61d4d75866f9c81a28cdfe75f"}/>), forked from <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - forked <GenericLinkBadge text={"purpur"} link={"https://purpurmc.org/"}/> server jar (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-purpur/commit/ad7ba51c21bf52e61d4d75866f9c81a28cdfe75f"} loc={LOC["Potpissers-purpur"].total}/>) <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - plugin (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-velocity"} loc={LOC["Potpissers-velocity"].Java.code}/>) for paper&#39;s <GenericLinkBadge text={"velocity"} link={"https://papermc.io/software/velocity"}/> server proxy <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - postgres database (<GenericSourceBadge github={"https://github.com/potpissers/Potpissers-postgres"} loc={LOC["Potpissers-postgres"].SQL.code}/>)<br/>
                         - was all hosted on <OvhBadge/><br/>
